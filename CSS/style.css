@@ -1,0 +1,21 @@
+*{
+    background-color: #1C1c1b;
+    background-color: #161616;
+}
+
+#logo{
+    width: 300px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#actual
+{
+    color: #F9B233;
+}
+
+nav a{
+    color: whitesmoke;
+    text-decoration: none;
+}
