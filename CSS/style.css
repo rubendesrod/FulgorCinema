@@ -1,21 +1,24 @@
 *{
-    background-color: #1C1c1b;
-    background-color: #161616;
+    background-color: #1C1C1B;
 }
 
 #logo{
     width: 300px;
     height: auto;
-    margin: 0;
-    padding: 0;
 }
 
 #actual
 {
+    font-weight: bold;
     color: #F9B233;
 }
 
 nav a{
     color: whitesmoke;
     text-decoration: none;
+    margin-top: 5em;
+}
+
+nav a:hover{
+    color:rgb(168, 164, 164);
 }
