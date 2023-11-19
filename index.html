@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fulgor Cinema</title>
+    <link rel="shortcut icon" href="IMG/ICO/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/carousel.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,86 +20,179 @@
     ></script>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row justify-content-between">
-        <div class="col-7">
-          <img src="IMG/LogoFurgor.png" alt="Logo" id="logo" />
+    <!--CODIGO DEL HEADER-->
+    <div class="container-fluid header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <img
+            class="navbar-brand"
+            src="./IMG/LogoFulgor.png"
+            alt="Fulgor logo"
+          />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <img src="./IMG/lista.png" />
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!--ms es margin left auto, va a dejar todo el margen posible que pueda a la izq-->
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">INICIO </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">QUIENES SOMOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">TAQUILLA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">LOGIN</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-5">
-          <nav>
-            <a href="#" id="actual">incio</a>
-            <a href="#">taquilla</a>
-            <a href="#">quienes somos</a>
-            <a href="#">login</a>
+      </nav>
+    </div>
+    <div class="contenedor container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <h1>TOP MEJORES PELICULAS VALORADAS</h1>
+        </div>
+      </div>
+    </div>
+    <!--CODIGO DEL CARRUSEL-->
+    <div class="contenedor-carrusel">
+      <div class="row carousel">
+        <div class="col-auto">
+          <ul class="slider">
+            <li
+              class="item"
+              style="background-image: url('IMG/batman_rises.jpg')"
+            >
+              <div class="content">
+                <h2 class="title">BATMAN: LA LEYENDA RENACE</h2>
+                <p class="description">
+                  Hace ya ocho años desde que Batman se convirtió en fugitivo al
+                  asumir la muerte de Harvey. La dura Ley Dent sigue aplacando
+                  la criminalidad de Gotham, aunque la llegada de una gata
+                  ladrona y un misterioso terrorista enmascarado lo cambiará
+                  todo.
+                </p>
+                <button>Mas Información</button>
+              </div>
+            </li>
+            <li
+              class="item"
+              style="background-image: url('IMG/election_purgue.jpg')"
+            >
+              <div class="content">
+                <h2 class="title">"ELECTION: La noche de las bestias"</h2>
+                <p class="description">
+                  Hace 18 años, Charlie Roan vivió el asesinato de su familia
+                  durante la noche de La Purga. Hoy, candidata a la presidencia,
+                  quiere acabar con el régimen impuesto hace 20 años, que
+                  utiliza este día para eliminar a los más pobres y recortar el
+                  gasto público.
+                </p>
+                <button>Mas Información</button>
+              </div>
+            </li>
+            <li
+              class="item"
+              style="background-image: url('IMG/fast_and_furius_7.jpg')"
+            >
+              <div class="content">
+                <h2 class="title">"FAST AND FURIUS 7"</h2>
+                <p class="description">
+                  Hace un año que Dominic y Brian fueron indultados y pudieron
+                  regresar a los Estados Unidos. Después de su llegada desean
+                  adaptarse a su nueva vida dentro de la legalidad, pero las
+                  cosas no son tan fáciles. Dom quiere acercarse a Letty y Brian
+                  se acostumbra a la vida en una urbanización con Mia y su hijo.
+                </p>
+                <button>Mas Información</button>
+              </div>
+            </li>
+            <li
+              class="item"
+              style="background-image: url('IMG/transformers_bestias.jpg')"
+            >
+              <div class="content">
+                <h2 class="title">
+                  "TRANSFORMERS: El Despertar de las Bestias"
+                </h2>
+                <p class="description">
+                  Durante la década de 1990, los Maximals, Predacons y
+                  Terrorcons se unen a la batalla existente en la Tierra entre
+                  Autobots y Decepticons.
+                </p>
+                <button>Mas Información</button>
+              </div>
+            </li>
+            <li
+              class="item"
+              style="background-image: url('IMG/expediente_warren.jpg')"
+            >
+              <div class="content">
+                <h2 class="title">"El Conjuro 2"</h2>
+                <p class="description">
+                  Ed y Lorraine Warren, renombrados demonólogos e investigadores
+                  de lo paranormal, se enfrentan de nuevo a las fuerzas
+                  infernales. En esta ocasión, viajan hasta el norte de Londres
+                  para tratar de ayudar a una madre y sus cuatro hijos, quienes
+                  habitan en una casa plagada de espíritus malignos.
+                </p>
+                <button>Mas Información</button>
+              </div>
+            </li>
+            <li
+              class="item"
+              style="background-image: url('IMG/solo_en_casa_2.jpeg')"
+            >
+              <div class="content">
+                <h2 class="title">"Solo en Casa 2"</h2>
+                <p class="description">
+                  En plenas navidades, Kevin y su familia están a punto de coger
+                  un avión para pasar unas pequeñas vacaciones. Sin embargo,
+                  Kevin se equivoca y embarca en un avión a Nueva York.
+                </p>
+                <button>Mas Información</button>
+              </div>
+            </li>
+          </ul>
+          <nav class="nav">
+            <ion-icon class="btn prev" name="arrow-back-outline"></ion-icon>
+            <ion-icon class="btn next" name="arrow-forward-outline"></ion-icon>
           </nav>
         </div>
       </div>
     </div>
-    <!--CODIGO DE CODE PEN-->
-    <main>
-      <ul class='slider'>
-        <li class='item' style="background-image: url('https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg')">
-          <div class='content'>
-            <h2 class='title'>"Lossless Youths"</h2>
-            <p class='description'> Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-            praesentium nisi. Id laboriosam ipsam enim.  </p>
-            <button>Read More</button>
-          </div>
-        </li>
-        <li class='item' style="background-image: url('https://i.redd.it/tc0aqpv92pn21.jpg')">
-          <div class='content'>
-            <h2 class='title'>"Estrange Bond"</h2>
-            <p class='description'> Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-            praesentium nisi. Id laboriosam ipsam enim.  </p>
-            <button>Read More</button>
-          </div>
-        </li>
-        <li class='item' style="background-image: url('https://wharferj.files.wordpress.com/2015/11/bio_north.jpg')">
-          <div class='content'>
-            <h2 class='title'>"The Gate Keeper"</h2>
-            <p class='description'> Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-            praesentium nisi. Id laboriosam ipsam enim.  </p>
-            <button>Read More</button>
-          </div>
-        </li>
-        <li class='item' style="background-image: url('https://images7.alphacoders.com/878/878663.jpg')">
-          <div class='content'>
-            <h2 class='title'>"Last Trace Of Us"</h2>
-            <p class='description'>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
-            </p>
-            <button>Read More</button>
-          </div>
-        </li>
-        <li class='item' style="background-image: url('https://theawesomer.com/photos/2017/07/simon_stalenhag_the_electric_state_6.jpg')">
-          <div class='content'>
-            <h2 class='title'>"Urban Decay"</h2>
-            <p class='description'>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
-            </p>
-            <button>Read More</button>
-          </div>
-        </li>
-        <li class='item' style="background-image: url('https://da.se/app/uploads/2015/09/simon-december1994.jpg')">
-          <div class='content'>
-            <h2 class='title'>"The Migration"</h2>
-            <p class='description'> Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-            praesentium nisi. Id laboriosam ipsam enim.  </p>
-            <button>Read More</button>
-          </div>
-        </li>
-      </ul>
-      <nav class='nav'>
-        <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
-        <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
-      </nav>
-    </main>
-    
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--CODIGO DEL FOOTER-->
+    <div class="contenedor-footer">
+      <div class="row justify-content-around">
+        <div class="col-auto">
+          hhh
+        </div>
+        <div class="col-auto">
+          jjj
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="JS/carousel.js"></script>
   </body>
 </html>
