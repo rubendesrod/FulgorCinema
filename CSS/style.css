@@ -53,4 +53,15 @@
 .contenedor-footer{
   background-color: #1C1C1B;
   color: whitesmoke;
+  margin-bottom: 0;
+  
+}
+
+.footer{
+  margin: 10px;
+}
+
+.footer img{
+  width: 120px;
+  height: 50px;
 }
