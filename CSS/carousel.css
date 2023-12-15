@@ -1,13 +1,12 @@
 
+  /*Estilo para lo que es el contenedor global del carrusel*/
   .carousel {
     height: 70vh;
-    display: grid;
     place-items: center;
-    background: none;
   }
   
+  /*Estilo para la parte que se enseña del carrusel y las peliculas en pequeño*/
   .item {
-    
     width: 200px;
     height: 300px;
     list-style-type: none;
@@ -21,6 +20,7 @@
     box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
     transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
   
+    /*Estilo para las peliculas que aparecen en pequeño por encima del carrusel*/
     &:nth-child(1), &:nth-child(2) {
       left: 0;
       top: 0;
@@ -38,34 +38,38 @@
     &:nth-child(6) { left: calc(50% + 660px); opacity: 0;filter: grayscale(100%); }
   }
   
+  /*Estilo del contenido del nombre de la pelicula y descripción*/
   .content {
     width: min(30vw,400px);
     position: absolute;
     top: 50%;
-    left: 3rem;
+    left: 7rem;
     transform: translateY(-50%);
     font: 400 0.85rem helvetica,sans-serif;
     color: white;
     text-shadow: 0px 2px 3px black;
     display: none;
   
+    /*El estilo del titulo*/
     & .title {
       font-family: 'Asap', sans-serif;
       text-transform: uppercase;
     }
   
+    /*El estilo de la descripción*/
     & .description {
       line-height: 1.7;
       margin: 1rem 0 1.5rem;
       font-size: 0.8rem;
     }
   
+    /*Estilo del botón*/
     & button {
       width: fit-content;
       background-color: rgba(0,0,0,0.1);
       color: white;
       border: 2px solid white;
-      border-radius: 0.25rem;
+      border-radius: 0.50rem;
       padding: 0.75rem;
       cursor: pointer;
     }
@@ -87,6 +91,7 @@
     }
   }
   
+  /*Estilo del navegador el cual es los botones para cambiar entre peliculas*/
   .nav {
     position: absolute;
     bottom: 2rem;
@@ -95,21 +100,27 @@
     z-index: 5;
     user-select: none;
   
+    /*Estilo a la clase del botón*/
     & .btn {
-      background-color: rgba(255,255,255,0.5);
-      color: rgba(0,0,0,0.7);
-      border: 2px solid rgba(0,0,0,0.6);
-      margin: 0 0.25rem;
-      padding: 0.75rem;
-      border-radius: 50%;
+      background-color: rgba(249, 176, 51,0.5);
+      color: rgba(255, 255, 255, 0.911);
+      margin: 0 0.50rem;
+      padding: 1rem;
+      border-radius: 100%;
       cursor: pointer;
-  
+      
+      /*Estilos hover para los dos botones*/
       &:hover {
-        background-color: rgba(255,255,255,0.3);
+        color: rgba(199, 199, 199, 0.911);
+        background-color: rgba(249, 176, 51, 0.3);
+        transition: 0.3s;
+        padding: 0.55rem;
       }
     }
   }
   
+  /*Media querys para hacer responsive el carrusel*/
+  /*Tanto la clase del content como la de los items que son las peliculas*/
   @media (width > 650px) and (width < 900px) {
     .content {
       & .title        { font-size: 1rem; }

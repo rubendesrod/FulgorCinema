@@ -1,67 +1,99 @@
+/*Importación de la fuente quue será utiliza de google fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,300&family=Comfortaa:wght@500&family=Jost&family=Kanit:wght@300&family=Pixelify+Sans&display=swap");
 
+/*Estilo global a toda la pagina*/
 * {
-  box-sizing: border-box;
   overflow-x: hidden;
   font-family: "Asap", sans-serif;
 }
 
-.header{
-  background-color: #1C1C1B;
+/*Estilo para el menu de navegacion header*/
+.header {
+  background-color: #1c1c1b;
+  /*Estilo para los enlaces del navegdor*/
+  & .nav-link {
+    color: white;
+    /*Estilo para el hover del los links*/
+    &:hover {
+      color: #8f8989;
+    }
+    /*Estilo para el focus de los links*/
+    &:focus {
+      color: #f9b233;
+    }
+  }
 }
 
+/*Para dar un ancho a navbar*/
 .navbar-brand {
   width: 8em;
 }
 
+/*Estilo del contenedor para ajustar los items*/
 .container-fluid {
   padding-left: 1em;
   padding-right: 2em;
 }
 
-.header .nav-link {
-  color: white;
+/*Estilo para el contenedor del h1*/
+.contenedor {
+  background-color: #1c1c1b;
+  /*Estilo para el h1 encabezado*/
+  & h1 {
+    top: 0;
+    left: 0;
+    font-size: 2.2em;
+    margin: 1em;
+    z-index: 1;
+    overflow: hidden;
+    font-weight: bold;
+    position: relative;
+  }
+
+  & h1::before{
+    content: attr(data-text);
+    position: absolute;
+    background-color: #f9b233;
+    overflow-x: hidden;
+    white-space: nowrap;
+    width: 400px;
+    border-right: 4px solid #f9b233;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation:luzTexto 4s linear infinite;
+    filter: drop-shadow(0 0 5px #f9b233);
+  }
 }
 
-.header .nav-link:hover {
-  color: #8f8989;
+/*Animacion del h1*/
+@keyframes luzTexto {
+  0%, 10%, 100%{
+    width: 0;
+  }
+  70%, 90%{
+    width: 100%;
+  }
 }
 
 
-.header .nav-link:focus {
-  color: #F9B233;
+/*Estilo para el contenedor del carrusel*/
+.contenedor-carrusel {
+  background-color: #1c1c1b;
 }
 
-.contenedor{
-  background-color: #1C1C1B;
-  color: whitesmoke;
-}
-
-.contenedor h1{
-  margin: 1em;
-  padding: 0.5em;
-  font-weight: bold;
-  background: radial-gradient(whitesmoke,#F9B233);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
-.contenedor-carrusel{
-  background-color: #1C1C1B;
-}
-
-.contenedor-footer{
-  background-color: #1C1C1B;
+/*Estilo para el contenedor del footer*/
+.contenedor-footer {
+  background-color: #1c1c1b;
   color: whitesmoke;
   margin-bottom: 0;
-  
 }
 
-.footer{
+/*Estilo para el footer*/
+.footer {
   margin: 10px;
-}
-
-.footer img{
-  width: 120px;
-  height: 50px;
+  /*Estilo para la imagen del footer*/
+  & img {
+    width: 120px;
+    height: 50px;
+  }
 }
