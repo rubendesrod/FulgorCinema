@@ -19,7 +19,7 @@
     border-radius: 20px;
     box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
     transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
-  
+
     /*Estilo para las peliculas que aparecen en pequeño por encima del carrusel*/
     &:nth-child(1), &:nth-child(2) {
       left: 0;
@@ -32,10 +32,10 @@
       opacity: 1;
     }
   
-    &:nth-child(3) { left: 50%; filter: grayscale(100%);}
-    &:nth-child(4) { left: calc(50% + 220px);filter: grayscale(100%); }
-    &:nth-child(5) { left: calc(50% + 440px); filter: grayscale(100%);}
-    &:nth-child(6) { left: calc(50% + 660px); opacity: 0;filter: grayscale(100%); }
+    &:nth-child(3) { left: 65%; filter: grayscale(100%);}
+    &:nth-child(4) { left: calc(65% + 220px);filter: grayscale(100%); }
+    &:nth-child(5) { left: calc(65% + 440px); filter: grayscale(100%);}
+    &:nth-child(6) { left: calc(65% + 660px); opacity: 0;filter: grayscale(100%); }
   }
   
   /*Estilo del contenido del nombre de la pelicula y descripción*/
