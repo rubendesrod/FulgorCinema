@@ -7,8 +7,8 @@
   
   /*Estilo para la parte que se enseña del carrusel y las peliculas en pequeño*/
   .item {
-    width: 200px;
-    height: 300px;
+    width: 180px;
+    height: 270px;
     list-style-type: none;
     position: absolute;
     top: 50%;
@@ -123,13 +123,14 @@
   /*Tanto la clase del content como la de los items que son las peliculas*/
   @media (width > 650px) and (width < 900px) {
     .content {
+      left: 4rem;
       & .title        { font-size: 1rem; }
       & .description  { font-size: 0.7rem; }
       & button        { font-size: 0.7rem; }
     }
     .item {
-      width: 160px;
-      height: 270px;
+      width: 130px;
+      height: 220px;
   
       &:nth-child(3) { left: 50%; }
       &:nth-child(4) { left: calc(50% + 170px); }
@@ -140,17 +141,44 @@
   
   @media (width < 650px) {
     .content {
-      & .title        { font-size: 0.9rem; }
-      & .description  { font-size: 0.65rem; }
+      left: 2rem;
+      & .title        { font-size: 1rem; }
+      & .description  { font-size: 0.67rem; }
       & button        { font-size: 0.7rem; }
     }
     .item {
-      width: 130px;
-      height: 220px;
+      width: 100px;
+      height: 160px;
   
-      &:nth-child(3) { left: 50%; }
-      &:nth-child(4) { left: calc(50% + 140px); }
-      &:nth-child(5) { left: calc(50% + 280px); }
-      &:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+      &:nth-child(3) { left: 56%; }
+      &:nth-child(4) { left: calc(56% + 110px); }
+      &:nth-child(5) { left: calc(60% + 280px); opacity: 0;}
+      &:nth-child(6) { left: calc(60% + 420px); opacity: 0; }
     }
+
+    .nav{
+      left: 60%;
+      & .btn{
+        margin: 0 0.40rem;
+        padding: 0.50rem;
+        &:hover{
+          transition: 0.3s;
+          padding: 0.22rem;
+        }
+      }
+    }
+
+  }
+
+  @media (width < 450px) {
+    .item {
+      width: 80px;
+      height: 160px;
+  
+      &:nth-child(3) { left: 60%; }
+      &:nth-child(4) { left: calc(60% + 90px); }
+      &:nth-child(5) { left: calc(60% + 280px); opacity: 0;}
+      &:nth-child(6) { left: calc(60% + 420px); opacity: 0; }
+    }
+
   }

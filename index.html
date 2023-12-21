@@ -60,10 +60,12 @@
         </div>
       </nav>
     </div>
-    <div class="contenedor ">
+    <div class="contenedor">
       <div class="row justify-content-center">
         <div class="col-auto">
-          <h1 data-text="&nbsp;TOP MEJORES PELICULAS VALORADAS&nbsp;">&nbsp;TOP MEJORES PELICULAS VALORADAS&nbsp;</h1>
+          <h1 data-text="&nbsp;TOP MEJORES PELICULAS VALORADAS&nbsp;">
+            &nbsp;TOP MEJORES PELICULAS VALORADAS&nbsp;
+          </h1>
         </div>
       </div>
     </div>
@@ -72,6 +74,7 @@
       <div class="row carousel">
         <div class="col-auto">
           <ul class="slider">
+            <!--Elemento de la lista de las peliculas BATMAN-->
             <li
               class="item"
               style="background-image: url('IMG/batman_rises.jpg')"
@@ -85,41 +88,64 @@
                   ladrona y un misterioso terrorista enmascarado lo cambiará
                   todo.
                 </p>
-                <button>Mas Información</button>
+                <button>VER TRAILER</button>
               </div>
             </li>
-            <li
-              class="item"
-              style="background-image: url('IMG/joker.jpeg');"
-            >
+            <!--Elemento de la lista de las peliculas VENOM-->
+            <li class="item" style="background-image: url('IMG/venom.jpg')">
               <div class="content">
-                <h2 class="title">"ELECTION: La noche de las bestias"</h2>
+                <h2 class="title">"VENOM"</h2>
                 <p class="description">
-                  Hace 18 años, Charlie Roan vivió el asesinato de su familia
-                  durante la noche de La Purga. Hoy, candidata a la presidencia,
-                  quiere acabar con el régimen impuesto hace 20 años, que
-                  utiliza este día para eliminar a los más pobres y recortar el
-                  gasto público.
+                  Como periodista, Eddie Brock (Tom Hardy) lleva tiempo
+                  intentando desenmascarar al creador de la Fundación Vida, el
+                  famoso genio científico Carlton Drake (Riz Ahmed), una
+                  obsesión que ha arruinado su carrera y su relación con su
+                  novia, Anne (Michelle Williams).
                 </p>
-                <button>Mas Información</button>
+                <button id="verVenomTrailer">VER TRAILER</button>
               </div>
+              <!--Inserccion del popUp a cada una de las peliculas-->
+              <dialog class="dialog" id="venomTrailer">
+                <div class="row justify-content-center">
+                  <div class="col-auto">
+                    <iframe
+                      id="videoVenom"
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/HguSMW8XveQ?si=4h8-lt1qbEA8HT-A"
+                      title="Trailer Venom"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-2">
+                    <button id="cerrarVenomTrailer">Cerrar</button>
+                  </div>
+                </div>
+              </dialog>
             </li>
+             <!--Elemento de la lista de las peliculas FAST_AND_FURIUS-->
             <li
               class="item"
               style="background-image: url('IMG/fast_and_furius_7.jpg')"
             >
               <div class="content">
-                <h2 class="title">"FAST AND FURIUS 7"</h2>
+                <h2 class="title">"FAST AND FURIUS X"</h2>
                 <p class="description">
-                  Hace un año que Dominic y Brian fueron indultados y pudieron
-                  regresar a los Estados Unidos. Después de su llegada desean
-                  adaptarse a su nueva vida dentro de la legalidad, pero las
-                  cosas no son tan fáciles. Dom quiere acercarse a Letty y Brian
-                  se acostumbra a la vida en una urbanización con Mia y su hijo.
+                  Hace 12 años atrás, en Río de Janeiro, Brasil, el mafioso y
+                  narcotraficante brasileño Hernán Reyes y su sociópata hijo
+                  Dante Reyes están esperando que Dominic "Dom" Toretto y Brian
+                  O'Conner, junto con el resto de su equipo vayan a intentar
+                  robar todo su dinero que está guardado en la jefatura de
+                  policía que tienen bajo su control en una bóveda de acero.
                 </p>
-                <button>Mas Información</button>
+                <button>VER TRAILER</button>
               </div>
             </li>
+             <!--Elemento de la lista de las peliculas TRANSFORMERS-->
             <li
               class="item"
               style="background-image: url('IMG/transformers_bestias.jpg')"
@@ -129,41 +155,48 @@
                   "TRANSFORMERS: El Despertar de las Bestias"
                 </h2>
                 <p class="description">
-                  Durante la década de 1990, los Maximals, Predacons y
-                  Terrorcons se unen a la batalla existente en la Tierra entre
-                  Autobots y Decepticons.
+                  En 1994, un par de arqueólogos se ven envueltos en un antiguo
+                  conflicto a través de una aventura por todo el mundo que se
+                  relaciona con tres facciones de Transformers: los Maximals,
+                  los Predacons y los Terrorcons mientras ayudan a Optimus Prime
+                  y los Autobots en una guerra para proteger la Tierra ante la
+                  llegada de Unicron.
                 </p>
-                <button>Mas Información</button>
+                <button>VER TRAILER</button>
               </div>
             </li>
+             <!--Elemento de la lista de las peliculas HARRY_POTTER-->
             <li
               class="item"
-              style="background-image: url('IMG/expediente_warren.jpg')"
+              style="background-image: url('IMG/harry_potter.jpg')"
             >
               <div class="content">
-                <h2 class="title">"El Conjuro 2"</h2>
+                <h2 class="title">
+                  "Harry Potter: Las reliquias de la Muerte II"
+                </h2>
                 <p class="description">
-                  Ed y Lorraine Warren, renombrados demonólogos e investigadores
-                  de lo paranormal, se enfrentan de nuevo a las fuerzas
-                  infernales. En esta ocasión, viajan hasta el norte de Londres
-                  para tratar de ayudar a una madre y sus cuatro hijos, quienes
-                  habitan en una casa plagada de espíritus malignos.
+                  La batalla entre las fuerzas del bien y del mal del mundo
+                  mágico se convierte en una guerra que no deja a nadie
+                  indiferente. Harry Potter es quien tiene que hacer el último
+                  sacrificio antes de enfrentarse al malvado Voldemort.
                 </p>
-                <button>Mas Información</button>
+                <button>VER TRAILER</button>
               </div>
             </li>
-            <li
-              class="item"
-              style="background-image: url('IMG/solo_en_casa_2.jpeg')"
-            >
+             <!--Elemento de la lista de las peliculas START_WARS-->
+            <li class="item" style="background-image: url('IMG/star_wars.jpg')">
               <div class="content">
-                <h2 class="title">"Solo en Casa 2"</h2>
+                <h2 class="title">
+                  "Star Wars Episodio VII: El despertar de la fuerza "
+                </h2>
                 <p class="description">
-                  En plenas navidades, Kevin y su familia están a punto de coger
-                  un avión para pasar unas pequeñas vacaciones. Sin embargo,
-                  Kevin se equivoca y embarca en un avión a Nueva York.
+                  Treinta años después de la victoria de la Alianza Rebelde
+                  sobre la segunda Estrella de la Muerte, la galaxia tiene que
+                  enfrentarse a una nueva amenaza: el malvado Kylo Ren y la
+                  Primera Orden. Cuando el desertor Finn llega a un planeta
+                  desierto conoce a Rey, cuyo androide contiene un mapa secreto.
                 </p>
-                <button>Mas Información</button>
+                <button>VER TRAILER</button>
               </div>
             </li>
           </ul>
@@ -178,7 +211,7 @@
     <div class="contenedor-footer">
       <div class="row justify-content-around footer">
         <div class="col-auto">
-          <img src="IMG/LogoFulgor.png" alt="Logo">
+          <img src="IMG/LogoFulgor.png" alt="Logo" />
           <div class="enlaces">
             <ul>
               <li>Contactos</li>
@@ -190,11 +223,11 @@
         <div class="col-auto">
           <h2>Redes Sociales</h2>
           <div class="redes">
-              <ul>
-                <li>Instagram</li>
-                <li>Facebook</li>
-                <li>Twitter</li>
-              </ul>
+            <ul>
+              <li>Instagram</li>
+              <li>Facebook</li>
+              <li>Twitter</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -207,6 +240,9 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <!--Inserccion del script para que funcione el carrusel-->
     <script src="JS/carousel.js"></script>
+    <!--Inserccion del script para que el botón ver trailer saque los trailers-->
+    <script src="JS/popUps.js"></script>
   </body>
 </html>

@@ -97,3 +97,23 @@
     height: 50px;
   }
 }
+
+/*Aqui estan las mediaquerys*/
+
+@media (width < 900px){
+  .contenedor {
+    & h1 {font-size: 1.7em;}
+  }
+}
+
+@media (width < 600px){
+  .contenedor {
+    & h1 {font-size: 1.3em;}
+  }
+}
+
+@media (width < 400px){
+  .contenedor {
+    & h1 {font-size: 1em;}
+  }
+}
