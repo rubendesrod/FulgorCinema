@@ -60,6 +60,7 @@
         </div>
       </nav>
     </div>
+    <!--CODIGO DEL BODY-->
     <div class="contenedor">
       <div class="row justify-content-center">
         <div class="col-auto">
@@ -74,22 +75,41 @@
       <div class="row carousel">
         <div class="col-auto">
           <ul class="slider">
-            <!--Elemento de la lista de las peliculas BATMAN-->
-            <li
-              class="item"
-              style="background-image: url('IMG/batman_rises.jpg')"
-            >
+            <!--Elemento de la lista de las peliculas AVENGERS-->
+            <li class="item" style="background-image: url('IMG/avengers.webp')">
               <div class="content">
-                <h2 class="title">BATMAN: LA LEYENDA RENACE</h2>
+                <h2 class="title">"AVENGERS: END GAME"</h2>
                 <p class="description">
-                  Hace ya ocho años desde que Batman se convirtió en fugitivo al
-                  asumir la muerte de Harvey. La dura Ley Dent sigue aplacando
-                  la criminalidad de Gotham, aunque la llegada de una gata
-                  ladrona y un misterioso terrorista enmascarado lo cambiará
-                  todo.
+                  Después de los eventos devastadores de "Avengers: Infinity
+                  War", el universo está en ruinas debido a las acciones de
+                  Thanos, el Titán Loco. Con la ayuda de los aliados que
+                  quedaron, los Vengadores deberán reunirse una vez más para
+                  intentar detenerlo y restaurar el orden en el universo de una
+                  vez por todas. todo.
                 </p>
-                <button>VER TRAILER</button>
+                <button id="verAvengersTrailer">VER TRAILER</button>
               </div>
+              <dialog class="dialog" id="avengersTrailer">
+                <div class="row justify-content-center">
+                  <div class="col-auto">
+                    <iframe
+                      id="videoAvengers"
+                      width="900"
+                      height="530"
+                      src="https://www.youtube.com/embed/UQ3bqYKnyhM?si=NjyXM9u8FdsDSPfs"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-2">
+                    <button id="cerrarAvengersTrailer">Cerrar</button>
+                  </div>
+                </div>
+              </dialog>
             </li>
             <!--Elemento de la lista de las peliculas VENOM-->
             <li class="item" style="background-image: url('IMG/venom.jpg')">
@@ -110,10 +130,10 @@
                   <div class="col-auto">
                     <iframe
                       id="videoVenom"
-                      width="560"
-                      height="315"
-                      src="https://www.youtube.com/embed/HguSMW8XveQ?si=4h8-lt1qbEA8HT-A"
-                      title="Trailer Venom"
+                      width="900"
+                      height="530"
+                      src="https://www.youtube.com/embed/nZ8FXOpcXSs?si=bnRaB6tq0Vf3IKHm"
+                      title="YouTube video player"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowfullscreen
@@ -121,18 +141,16 @@
                   </div>
                 </div>
                 <div class="row justify-content-center">
-                  <div class="col-auto">
-                    <button id="cerrarVenomTrailer">
-                      CERRAR
-                    </button>
+                  <div class="col-2">
+                    <button id="cerrarVenomTrailer">Cerrar</button>
                   </div>
                 </div>
               </dialog>
             </li>
-             <!--Elemento de la lista de las peliculas FAST_AND_FURIUS-->
+            <!--Elemento de la lista de las peliculas FAST_AND_FURIUS-->
             <li
               class="item"
-              style="background-image: url('IMG/fast_and_furius_7.jpg')"
+              style="background-image: url('IMG/fast_and_furius_x.jpg')"
             >
               <div class="content">
                 <h2 class="title">"FAST AND FURIUS X"</h2>
@@ -144,10 +162,32 @@
                   robar todo su dinero que está guardado en la jefatura de
                   policía que tienen bajo su control en una bóveda de acero.
                 </p>
-                <button>VER TRAILER</button>
+                <button id="verFuriousTrailer">VER TRAILER</button>
               </div>
+              <!--Inserccion del popUp a cada una de las peliculas-->
+              <dialog class="dialog" id="furiousTrailer">
+                <div class="row justify-content-center">
+                  <div class="col-auto">
+                    <iframe
+                      id="videoFurious"
+                      width="900"
+                      height="530"
+                      src="https://www.youtube.com/embed/FDhvbIqTQwI?si=xdFYW4tTulWWiKDr"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-2">
+                    <button id="cerrarFuriousTrailer">Cerrar</button>
+                  </div>
+                </div>
+              </dialog>
             </li>
-             <!--Elemento de la lista de las peliculas TRANSFORMERS-->
+            <!--Elemento de la lista de las peliculas TRANSFORMERS-->
             <li
               class="item"
               style="background-image: url('IMG/transformers_bestias.jpg')"
@@ -164,13 +204,35 @@
                   y los Autobots en una guerra para proteger la Tierra ante la
                   llegada de Unicron.
                 </p>
-                <button>VER TRAILER</button>
+                <button id="verTransformerTrailer">VER TRAILER</button>
               </div>
+              <!--Inserccion del popUp a cada una de las peliculas-->
+              <dialog class="dialog" id="transformerTrailer">
+                <div class="row justify-content-center">
+                  <div class="col-auto">
+                    <iframe
+                      id="videoTransformer"
+                      width="900"
+                      height="530"
+                      src="https://www.youtube.com/embed/dFg1ow_5qMM?si=Oqr8No_wVV2jhqc_"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-2">
+                    <button id="cerrarTransformerTrailer">Cerrar</button>
+                  </div>
+                </div>
+              </dialog>
             </li>
-             <!--Elemento de la lista de las peliculas HARRY_POTTER-->
+            <!--Elemento de la lista de las peliculas HARRY_POTTER-->
             <li
               class="item"
-              style="background-image: url('IMG/harry_potter.jpg')"
+              style="background-image: url('IMG/harry_potter2.jpg')"
             >
               <div class="content">
                 <h2 class="title">
@@ -182,10 +244,32 @@
                   indiferente. Harry Potter es quien tiene que hacer el último
                   sacrificio antes de enfrentarse al malvado Voldemort.
                 </p>
-                <button>VER TRAILER</button>
+                <button id="verHarryTrailer">VER TRAILER</button>
               </div>
+              <!--Inserccion del popUp a cada una de las peliculas-->
+              <dialog class="dialog" id="harryTrailer">
+                <div class="row justify-content-center">
+                  <div class="col-auto">
+                    <iframe
+                      id="videoHarry"
+                      width="900"
+                      height="530"
+                      src="https://www.youtube.com/embed/HguSMW8XveQ?si=uizBdYykK6ZpUGyh"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-2">
+                    <button id="cerrarHarryTrailer">Cerrar</button>
+                  </div>
+                </div>
+              </dialog>
             </li>
-             <!--Elemento de la lista de las peliculas START_WARS-->
+            <!--Elemento de la lista de las peliculas START_WARS-->
             <li class="item" style="background-image: url('IMG/star_wars.jpg')">
               <div class="content">
                 <h2 class="title">
@@ -198,8 +282,29 @@
                   Primera Orden. Cuando el desertor Finn llega a un planeta
                   desierto conoce a Rey, cuyo androide contiene un mapa secreto.
                 </p>
-                <button>VER TRAILER</button>
+                <button id="verStarWarsTrailer">VER TRAILER</button>
               </div>
+              <dialog class="dialog" id="starWarsTrailer">
+                <div class="row justify-content-center">
+                  <div class="col-auto">
+                    <iframe
+                      id="videoStarWars"
+                      width="900"
+                      height="530"
+                      src="https://www.youtube.com/embed/BmLta1x5ZeQ?si=ST3ObG9QE6m_14kw"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-2">
+                    <button id="cerrarStarWarsTrailer">Cerrar</button>
+                  </div>
+                </div>
+              </dialog>
             </li>
           </ul>
           <nav class="nav">
