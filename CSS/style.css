@@ -120,21 +120,38 @@ footer{
 }
 
 /*Aqui estan las mediaquerys*/
+@media (width < 1200px){
+  .contenedor {& h1 {font-size: 1.7em;}}
+  dialog {& iframe {width: 700px;height:330px}}
+}
+
+@media (width < 1050px){
+  dialog {
+    & iframe {width: 600px;height:330px}
+    & button {font-size: 1.3em;}
+  }
+}
 
 @media (width < 900px){
-  .contenedor {
-    & h1 {font-size: 1.7em;}
+  .contenedor {& h1 {font-size: 1.5em;}}
+  dialog {
+    & iframe {width: 500px;height:300px}
+    & button {font-size: 1.1em;}
   }
 }
 
-@media (width < 600px){
-  .contenedor {
-    & h1 {font-size: 1.3em;}
+@media (width < 700px){
+  .contenedor {& h1 {font-size: 1.3em;}}
+  dialog {
+    & iframe {width: 400px;height:250px}
+    & button {font-size: 0.9em;}
   }
 }
 
-@media (width < 400px){
-  .contenedor {
-    & h1 {font-size: 1em;}
+@media (width < 550px){
+  .contenedor {& h1 {font-size: 1em;}}
+  dialog {
+    & iframe {width: 280px;height:230px}
+    & button {font-size: 0.6em;}
   }
 }
