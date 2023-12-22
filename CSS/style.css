@@ -5,6 +5,7 @@
 * {
   overflow-x: hidden;
   font-family: "Asap", sans-serif;
+  box-sizing: border-box;
 }
 
 /*Estilo para el menu de navegacion header*/
@@ -81,21 +82,41 @@
   background-color: #1c1c1b;
 }
 
-/*Estilo para el contenedor del footer*/
-.contenedor-footer {
-  background-color: #1c1c1b;
-  color: whitesmoke;
-  margin-bottom: 0;
+/*Estilos para los dialogos que contienen los trailers*/
+dialog{
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  & iframe{
+    border-radius: 20px;
+  }
+
+  & button {
+    font-weight: bold;
+    font-size: 1.6em;
+    border: 0;
+    background-color: #f9b233;
+    border-radius: 20px;
+    width: 4em;
+    &:hover{
+      transition: 0.5s;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border:1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+  }
+
 }
 
-/*Estilo para el footer*/
-.footer {
-  margin: 10px;
-  /*Estilo para la imagen del footer*/
-  & img {
-    width: 120px;
-    height: 50px;
-  }
+/*Estilo para el contenedor del footer*/
+footer{
+  background-color: #1c1c1b;
 }
 
 /*Aqui estan las mediaquerys*/

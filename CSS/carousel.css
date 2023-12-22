@@ -171,6 +171,16 @@
   }
 
   @media (width < 450px) {
+    .carousel {
+      height: 80vh;
+      place-items: center;
+    }
+    .content {
+      left: 2rem;
+      & .title        { font-size: 1rem; }
+      & .description  { font-size: 0.67rem; }
+      & button        { font-size: 0.7rem; }
+    }
     .item {
       width: 80px;
       height: 160px;

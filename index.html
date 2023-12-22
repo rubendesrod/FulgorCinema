@@ -7,11 +7,17 @@
     <link rel="shortcut icon" href="IMG/ICO/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="CSS/style.css" />
     <link rel="stylesheet" href="CSS/carousel.css" />
+    <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      integrity="..."
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="..."
     />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -315,30 +321,84 @@
       </div>
     </div>
     <!--CODIGO DEL FOOTER-->
-    <div class="contenedor-footer">
-      <div class="row justify-content-around footer">
-        <div class="col-auto">
-          <img src="IMG/LogoFulgor.png" alt="Logo" />
-          <div class="enlaces">
-            <ul>
-              <li>Contactos</li>
-              <li>Politica de Privacidad</li>
-              <li>Politica de cookies</li>
+    <footer class="text-white text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase fw-bold">FULGOR CINEMA</h5>
+            <p>
+              El cine de tus sueño el cual despertará tu luz interior en cada
+              pelicula, cada momento destacado y cada momentos de ensueño.
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase fw-bold">Contactanos</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <i class="fas fa-envelope me-2"></i>fulgorcinema@gmail.com
+              </li>
+              <li>
+                <i class="fas fa-home me-2"></i>C/ Barrocal de Valladolid
+              </li>
+              <li>
+                <i class="fas fa-phone me-2"></i>+34 640685953
+              </li>
             </ul>
           </div>
-        </div>
-        <div class="col-auto">
-          <h2>Redes Sociales</h2>
-          <div class="redes">
-            <ul>
-              <li>Instagram</li>
-              <li>Facebook</li>
-              <li>Twitter</li>
-            </ul>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-0 fw-bold">Danos tu Follow</h5>
+            <p class="mb-0">Todo lo nuevo en redes</p>
+            <section class="mb-4">
+              <!-- Facebook -->
+              <a
+                data-mdb-ripple-init
+                class="btn btn-floating m-1"
+                style="background-color:#f9b233"
+                href="#!"
+                role="button"
+                ><i class="fab fa-facebook-f text-dark"></i
+              ></a>
+              <!-- Twitter -->
+              <a
+                data-mdb-ripple-init
+                class="btn btn-floating m-1"
+                style="background-color: #f9b233"
+                href="#!"
+                role="button"
+                ><i class="fab fa-twitter text-dark"></i
+              ></a>
+              <!-- Instagram -->
+              <a
+                data-mdb-ripple-init
+                class="btn btn-floating m-1"
+                style="background-color: #f9b233"
+                href="#!"
+                role="button"
+                ><i class="fab fa-instagram text-dark"></i
+              ></a>
+            </section>
           </div>
+          <!--Grid column-->
         </div>
+        <!--Grid row-->
       </div>
-    </div>
+      <!-- Grid container -->
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2024 Copyright:FulgorCinema
+      </div>
+      <!-- Copyright -->
+    </footer>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
