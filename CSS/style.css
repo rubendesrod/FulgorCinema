@@ -23,6 +23,10 @@
       color: #f9b233;
     }
   }
+  & .nav-item.active a {
+    color: #f9b233;
+    font-weight: bold;
+  }
 }
 
 /*Para dar un ancho a navbar*/
@@ -93,7 +97,6 @@ dialog{
   & iframe{
     border-radius: 20px;
   }
-
   & button {
     font-weight: bold;
     font-size: 1.6em;
@@ -111,7 +114,6 @@ dialog{
       box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     }
   }
-
 }
 
 /*Estilo para el contenedor del footer*/

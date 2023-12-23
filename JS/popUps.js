@@ -37,8 +37,8 @@ interfaz.abrirVenom.addEventListener("click", function () {
   interfaz.dialogVenom.showModal();
 });
 interfaz.cerrarVenom.addEventListener("click", function () {
-  interfaz.dialogVenom.close();
   interfaz.videoVenom.src = interfaz.videoVenom.src;
+  interfaz.dialogVenom.close();
 });
 
 // Eventos HARRY POTTER
@@ -46,8 +46,8 @@ interfaz.abrirHarry.addEventListener("click", function () {
   interfaz.dialogHarry.showModal();
 });
 interfaz.cerrarHarry.addEventListener("click", function () {
-  interfaz.dialogHarry.close();
   interfaz.videoHarry.src = interfaz.videoHarry.src;
+  interfaz.dialogHarry.close();
 });
 
 // Eventos FAST AND FURIUOUS X
@@ -55,8 +55,8 @@ interfaz.abrirFurious.addEventListener("click", function () {
   interfaz.dialogoFurious.showModal();
 });
 interfaz.cerrarFurious.addEventListener("click", function () {
-  interfaz.dialogoFurious.close();
   interfaz.videoFurious.src = interfaz.videoFurious.src;
+  interfaz.dialogoFurious.close();
 });
 
 // Eventos TRANSFORMERS
@@ -64,8 +64,8 @@ interfaz.abrirTransformer.addEventListener("click", function () {
   interfaz.dialogoTransformer.showModal();
 });
 interfaz.cerrarTransformer.addEventListener("click", function () {
-  interfaz.dialogoTransformer.close();
   interfaz.videoTransformer.src = interfaz.videoTransformer.src;
+  interfaz.dialogoTransformer.close();
 });
 
 // Eventos Avengers End Game
@@ -73,8 +73,8 @@ interfaz.abrirAvengers.addEventListener("click", function () {
   interfaz.dialogoAvengers.showModal();
 });
 interfaz.cerrarAvengers.addEventListener("click", function () {
-  interfaz.dialogoAvengers.close();
   interfaz.videoAvengers.src = interfaz.videoAvengers.src;
+  interfaz.dialogoAvengers.close();
 });
 
 // Eventos Star Wars
@@ -82,6 +82,6 @@ interfaz.abrirStar.addEventListener("click", function () {
   interfaz.dialogoStar.showModal();
 });
 interfaz.cerrarStar.addEventListener("click", function () {
-  interfaz.dialogoStar.close();
   interfaz.videoStar.src = interfaz.videoStar.src;
+  interfaz.dialogoStar.close();
 });
