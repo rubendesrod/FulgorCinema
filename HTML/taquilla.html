@@ -1,148 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taquilla</title>
-    <link rel="shortcut icon" href="../IMG/ICO/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../CSS/style.css" />
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      integrity="..."
-    />
-    <!-- Font Awesome CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="..."
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taquilla</title>
+  <link rel="shortcut icon" href="./IMG/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../CSS/estilosTaquilla.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    integrity="..." />
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="..." />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <!--Codigo del navegador-->
+  <!--Codigo del banner-->
+  <div class="fondo_imagen">
+    <img id="imagenFondo" class="img" src="../IMG/interestellar.jpg" />
+    <!-- INICIO DEL NAVEGADOR -->
     <div class="container-fluid header">
-        <nav class="navbar navbar-expand-lg nav">
-            <div class="container-fluid">
-              <img
-                class="navbar-brand"
-                src="../IMG/LogoFulgor.png"
-                alt="Fulgor logo"
-              />
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <img src="../IMG/lista.png" />
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <!--ms es margin left auto, va a dejar todo el margen posible que pueda a la izq-->
-                <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="../index.html">INICIO </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">QUIENES SOMOS</a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">TAQUILLA</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">LOGIN</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-      </div>
-      <!--CODIGO DEL FOOTER-->
-    <footer class="text-white text-center text-lg-start">
-      <!-- Grid container -->
-      <div class="container p-4">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <h5 class="text-uppercase fw-bold">FULGOR CINEMA</h5>
-            <p>
-              El cine de tus sueño el cual despertará tu luz interior en cada
-              pelicula, cada momento destacado y cada momentos de ensueño.
-            </p>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase fw-bold">Contactanos</h5>
-
-            <ul class="list-unstyled mb-0">
-              <li>
-                <i class="fas fa-envelope me-2"></i>fulgorcinema@gmail.com
+      <nav class="navbar navbar-expand-lg nav">
+        <div class="container-fluid">
+          <img class="navbar-brand" id="logo" src="../IMG/LogoFulgor.png" alt="Fulgor logo" />
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="../IMG/lista.png" />
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!--ms es margin left auto, va a dejar todo el margen posible que pueda a la izq-->
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">INICIO </a>
               </li>
-              <li>
-                <i class="fas fa-home me-2"></i>C/ Barrocal de Valladolid
+              <li class="nav-item">
+                <a class="nav-link" href="#">QUIENES SOMOS</a>
               </li>
-              <li>
-                <i class="fas fa-phone me-2"></i>+34 640685953
+              <li class="nav-item active">
+                <a class="nav-link" href="#">TAQUILLA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">LOGIN</a>
               </li>
             </ul>
           </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-0 fw-bold">Danos tu Follow</h5>
-            <p class="mb-0">Todo lo nuevo en redes</p>
-            <section class="mb-4">
-              <!-- Facebook -->
-              <a
-                data-mdb-ripple-init
-                class="btn btn-floating m-1"
-                style="background-color:#f9b233"
-                href="#!"
-                role="button"
-                ><i class="fab fa-facebook-f text-dark"></i
-              ></a>
-              <!-- Twitter -->
-              <a
-                data-mdb-ripple-init
-                class="btn btn-floating m-1"
-                style="background-color: #f9b233"
-                href="#!"
-                role="button"
-                ><i class="fab fa-twitter text-dark"></i
-              ></a>
-              <!-- Instagram -->
-              <a
-                data-mdb-ripple-init
-                class="btn btn-floating m-1"
-                style="background-color: #f9b233"
-                href="#!"
-                role="button"
-                ><i class="fab fa-instagram text-dark"></i
-              ></a>
-            </section>
-          </div>
-          <!--Grid column-->
         </div>
-        <!--Grid row-->
+      </nav>
+    </div>
+    <!-- FIN NAVEGADOR -->
+    <!-- CONTENIDO DE LA PELICULA -->
+    <div class="container contenido-pelicula">
+      <div class="row">
+        <div class="col-12 col-md-8  col-lg-6 mx-auto d-flex align-items-center flex-column">
+          <h5 id="titulo">Interstellar</h5>
+        </div>
       </div>
-      <!-- Grid container -->
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2024 Copyright:FulgorCinema
+      <div class="row">
+        <div class="col-12  col-md-8 col-lg-6 mx-auto d-flex align-items-center flex-column">
+          <img id="puntuacion" src="../IMG/puntuacion/estrellas4.png" width="100" />
+        </div>
       </div>
-      <!-- Copyright -->
-    </footer>
+      <div class="row">
+        <div class="col-12  col-md-8 col-lg-6 mx-auto d-flex align-items-center flex-column">
+          <p id="descripcion">Un grupo de científicos y exploradores, encabezados por Cooper, se embarcan en un viaje espacial para encontrar un lugar con las condiciones necesarias para reemplazar a la Tierra y comenzar una nueva vida allí. La Tierra está llegando a su fin y este grupo necesita encontrar un planeta más allá de nuestra galaxia que garantice el futuro de la raza humana. </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-8 col-lg-6 mx-auto d-flex align-items-center flex-column">
+          <button class="boton_verTrailer" type="submit"> Ver trailler</button>
+        </div>
+      </div>
+    </div>
+    <!-- FIN DEL CONTENIDO DE LA PELICULA -->
+  </div>
+  <div class="container-fluid contenedor">
+    <!-- Codigo de los horarios y comprar entrada -->
+    <div class="horarios">
+      <div class="row justify-content-around">
+        <!--Columna de los dias-->
+        <div class="col-auto">
+          <ul>
+            <button><=</button>
+            <li>LUN</li>
+            <li>MAR</li>
+            <li>MIER</li>
+            <button>=></button>
+          </ul>
+        </div>
+        <!--Columna de las horas-->
+        <div class="col-auto">
+          <ul>
+            <button><=</button>
+            <li>LUN</li>
+            <li>MAR</li>
+            <li>MIER</li>
+            <button>=></button>
+          </ul>
+        </div>
+        <!--Columna boton comprar entrada-->
+        <div class="col-auto">
+          <a href="#">Comprar Entrada</a>
+        </div>
+      </div>
+    </div>
+    <!--Codigo de las carteleras-->
+    <div class="container-fluid cartelera">
+      <!--3 filas con 4 columnas cada una-->
+      <div class="row justify-content-around">
+        <div class="col-auto">
+          <img src="../IMG/carteleras/interestelar.jpeg"  class="pelicula" alt="interestellar">
+        </div>
+        <div class="col-auto justify-content-around">
+          <img src="../IMG/carteleras/joker.jpg" class="pelicula" alt="joker">
+        </div>
+        <div class="col-auto">
+          <img src="../IMG/carteleras/batman.jpg"  class="pelicula" alt="batman">
+        </div>
+        <div class="col-auto">
+          <img src="../IMG/carteleras/tucker&dale.jpg" class="pelicula" alt="tucker">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--CODIGO DEL FOOTER-->
+  <footer class="text-white text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase fw-bold">FULGOR CINEMA</h5>
+          <p>
+            El cine de tus sueño el cual despertará tu luz interior en cada
+            pelicula, cada momento destacado y cada momentos de ensueño.
+          </p>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase fw-bold">Contactanos</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <i class="fas fa-envelope me-2"></i>fulgorcinema@gmail.com
+            </li>
+            <li>
+              <i class="fas fa-home me-2"></i>C/ Barrocal de Valladolid
+            </li>
+            <li>
+              <i class="fas fa-phone me-2"></i>+34 640685953
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-0 fw-bold">Danos tu Follow</h5>
+          <p class="mb-0">Todo lo nuevo en redes</p>
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a data-mdb-ripple-init class="btn btn-floating m-1" style="background-color:#f9b233" href="#!"
+              role="button"><i class="fab fa-facebook-f text-dark"></i></a>
+            <!-- Twitter -->
+            <a data-mdb-ripple-init class="btn btn-floating m-1" style="background-color: #f9b233" href="#!"
+              role="button"><i class="fab fa-twitter text-dark"></i></a>
+            <!-- Instagram -->
+            <a data-mdb-ripple-init class="btn btn-floating m-1" style="background-color: #f9b233" href="#!"
+              role="button"><i class="fab fa-instagram text-dark"></i></a>
+          </section>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2024 Copyright:FulgorCinema
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!--Inserccion de nuestro script-->
+  <script src="../JS/app.js"></script>
 </body>
+
 </html>

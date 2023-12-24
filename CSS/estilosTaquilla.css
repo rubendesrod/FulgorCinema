@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,300&family=Comfortaa:wght@500&family=Jost&family=Kanit:wght@300&family=Pixelify+Sans&display=swap");
+
+* {
+  font-family: "Asap", sans-serif;
+}
+
+/*Estilo para el menu de navegacion header*/
+.header {
+  position: absolute;
+  z-index: 1;
+  /*Estilo para los enlaces del navegdor*/
+  & .nav-link {
+    color: white;
+    /*Estilo para el hover del los links*/
+    &:hover {
+      color: #8f8989;
+    }
+    /*Estilo para el focus de los links*/
+    &:focus {
+      color: #f9b233;
+    }
+  }
+  & .nav-item.active a {
+    color: #f9b233;
+    font-weight: bold;
+  }
+}
+
+/*Para dar un ancho a navbar*/
+.navbar-brand {
+  width: 8em;
+}
+
+.fondo_imagen {
+  height: 60vh;
+  & .img {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+  }
+}
+
+.contenedor {
+  background-color: #1c1c1b;
+}
+
+.container.contenido-pelicula {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  #titulo {
+    font-weight: bold;
+    color: #f9b233;
+  }
+  #descripcion {
+    color: white;
+  }
+  .boton_verTrailer {
+    font-weight: bold;
+    font-size: 1.1em;
+    border: 0;
+    background-color: #f9b233;
+    border-radius: 20px;
+    width: 8em;
+    &:hover {
+      transition: 0.5s;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0)
+      );
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+  }
+}
+
+/*Codigo de los horarios*/
+.horarios{
+  padding: 1em;
+  background-color: #1c1c1b;
+  height: 4em;
+  color: white;
+  font-size: 1.4em;
+  /*Lista desordenada dentro de horarios*/
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    /*Item list*/
+    li {
+      margin: 3px;
+      &:nth-child(2), &:nth-child(4) {
+        /* Estilos para el primer y tercer li */
+        font-size: 0.8em;
+        opacity: 0.3;
+      }
+    }
+  }
+  a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 0.8em;
+    border: 0;
+    background-color: #f9b233;
+    border-radius: 20px;
+    width: 8em;
+    padding: 0.3em;
+    &:hover {
+      transition: 0.5s;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0)
+      );
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+  }
+}
+
+/*Estilos para el contenedor de las carteleras*/
+.cartelera{
+  background-color: #1c1c1b;
+  margin: 6em;
+  /*Imagenes dentro de la cartelera*/
+  img {
+    width: 200px;
+    height: 320px;
+  }
+}
+
+
+/*Estilo para el contenedor del footer*/
+footer {
+  background-color: #1c1c1b;
+}
+
+@media (width < 992px) {
+  .img {
+    content: url("../IMG/batman_resize.jpg");
+  }
+
+  .fondo_imagen {
+    height: 80vh;
+    & .img {
+      height: 80vh;
+    }
+  }
+  .container.contenido-pelicula {
+    top: 50%;
+  }
+}
+
+@media (width < 376px) {
+  .container.contenido-pelicula {
+    top: 55%;
+  }
+}
