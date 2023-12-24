@@ -127,16 +127,33 @@
       box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     }
   }
+  button{
+    background: none;
+    border: none;
+  }
 }
 
 /*Estilos para el contenedor de las carteleras*/
 .cartelera{
   background-color: #1c1c1b;
-  margin: 6em;
+  margin: 2em;
+  padding: 3em;
   /*Imagenes dentro de la cartelera*/
   img {
     width: 200px;
-    height: 320px;
+    height: 300px;
+  }
+  /*Titulos de las imagenes*/
+  h3{
+    margin-top: 8px;
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
+  }
+  h4{
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
   }
 }
 

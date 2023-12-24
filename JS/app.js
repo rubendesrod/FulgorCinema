@@ -53,10 +53,10 @@ const peliculas = {
   },
   // Cartelera equalizer 2.
   equalizer: {
-    titulo: "Tucker & Dale: Contra el Mal",
+    titulo: "Equalizer 2",
     descripcion:
       "El exagente secreto estadounidense Robert McCall continúa combatiendo por su cuenta a secuestradores, maltratadores y otros delincuentes que se cruzan en su solitaria vida de conductor de un servicio de VTC. Ahora, sin embargo, va a tener que intervenir en un asunto que le afecta personalmente.",
-    imagen: "../IMG/equalizer.jpeg",
+    imagen: "../IMG/equalizer.jpg",
     puntuacion: "../IMG/puntuacion/estrellas3.png",
   },
   // Cartelera interestellar .

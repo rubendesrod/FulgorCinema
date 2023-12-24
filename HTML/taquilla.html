@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taquilla</title>
-  <link rel="shortcut icon" href="./IMG/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="../IMG/ICO/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../CSS/estilosTaquilla.css" />
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -84,21 +84,38 @@
         <!--Columna de los dias-->
         <div class="col-auto">
           <ul>
-            <button><=</button>
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#f9b233" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+              </svg>
+            </button>
             <li>LUN</li>
             <li>MAR</li>
             <li>MIER</li>
-            <button>=></button>
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#f9b233" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+              </svg>
+            </button>
           </ul>
         </div>
         <!--Columna de las horas-->
         <div class="col-auto">
           <ul>
-            <button><=</button>
-            <li>LUN</li>
-            <li>MAR</li>
-            <li>MIER</li>
-            <button>=></button>
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#f9b233" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+              </svg>
+            </button>
+            </button>
+            <li>17:30</li>
+            <li>19:00</li>
+            <li>21:00</li>
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#f9b233" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+              </svg>
+            </button>
           </ul>
         </div>
         <!--Columna boton comprar entrada-->
@@ -108,23 +125,66 @@
       </div>
     </div>
     <!--Codigo de las carteleras-->
-    <div class="container-fluid cartelera">
       <!--3 filas con 4 columnas cada una-->
-      <div class="row justify-content-around">
+    <div class="row justify-content-around cartelera">
         <div class="col-auto">
-          <img src="../IMG/carteleras/interestelar.jpeg"  class="pelicula" alt="interestellar">
+           <img src="../IMG/carteleras/interestelar.jpeg"  class="pelicula" alt="interestellar">
+           <h3>Insterestellar</h3>
         </div>
         <div class="col-auto justify-content-around">
           <img src="../IMG/carteleras/joker.jpg" class="pelicula" alt="joker">
+          <h3>Joker</h3>
         </div>
         <div class="col-auto">
           <img src="../IMG/carteleras/batman.jpg"  class="pelicula" alt="batman">
+          <h3>Batman</h3>
+          <h4>"La Leyenda Renace"</h4>
         </div>
         <div class="col-auto">
           <img src="../IMG/carteleras/tucker&dale.jpg" class="pelicula" alt="tucker">
+          <h3>Tucker & Dale</h3>
+          <h4>"Contra el mal"</h4>
+        </div>
+        <div class="col-auto">
+          <img src="../IMG/carteleras/extraccion.jpg"  class="pelicula" alt="extraccion2">
+          <h3>Extraccion - 2</h3>
+       </div>
+       <div class="col-auto justify-content-around">
+         <img src="../IMG/carteleras/aqualizer.jpg" class="pelicula" alt="equalizer">
+         <h3>Equalizer 2</h3>
+       </div>
+      </div>
+      <!--3 filas con 4 columnas-->
+    <div class="row justify-content-around cartelera">
+      <div class="col-auto">
+        <img src="../IMG/carteleras/avengers.jpg"  class="pelicula" alt="avengers">
+        <h3>Avengers</h3>
+        <h4>"ENDGAME"</h4>
+     </div>
+     <div class="col-auto justify-content-around">
+       <img src="../IMG/carteleras/fast_and_furious_x.webp" class="pelicula" alt="fastAndFurious">
+       <h3>Fast And Furious X</h3>
+     </div>
+      <div class="col-auto">
+        <img src="../IMG/carteleras/harry_potter.jpg"  class="pelicula" alt="harryPotter">
+        <h3>Harry Potter</h3>
+        <h4>"Las reliquias de la muerte II"</h4>
+     </div>
+     <div class="col-auto justify-content-around">
+       <img src="../IMG/carteleras/startWars.webp" class="pelicula" alt="starWars">
+       <h3>Star Wars</h3>
+       <h4>"El ultimo jedi"</h4>
+     </div>
+        <div class="col-auto">
+          <img src="../IMG/carteleras/barbie.webp"  class="pelicula" alt="barbie">
+          <h3>Barbie</h3>
+        </div>
+        <div class="col-auto">
+          <img src="../IMG/carteleras/venom.jpg" class="pelicula" alt="venom">
+          <h3>Venom</h3>
         </div>
       </div>
-    </div>
+    </div> 
   </div>
   <!--CODIGO DEL FOOTER-->
   <footer class="text-white text-center text-lg-start">
