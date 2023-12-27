@@ -82,7 +82,7 @@
 }
 
 /*Codigo de los horarios*/
-.horarios{
+.horarios {
   padding: 1em;
   background-color: #1c1c1b;
   height: 4em;
@@ -96,14 +96,25 @@
     /*Item list*/
     li {
       margin: 3px;
-      &:nth-child(2), &:nth-child(4) {
+      &:nth-child(2),
+      &:nth-child(4) {
         /* Estilos para el primer y tercer li */
         font-size: 0.8em;
         opacity: 0.3;
       }
     }
+    /*Button dentro del ul*/
+    button {
+      svg {
+        transition: transform 0.3s, fill 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.5);
+          fill: #946920;
+        }
+      }
+    }
   }
-  a{
+  a {
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -127,39 +138,47 @@
       box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     }
   }
-  button{
+  button {
     background: none;
     border: none;
   }
 }
 
 /*Estilos para el contenedor de las carteleras*/
-.cartelera{
+.cartelera {
   background-color: #1c1c1b;
-  margin: 2em;
+  margin: 0em;
   padding: 3em;
   /*Imagenes dentro de la cartelera*/
   img {
     width: 200px;
     height: 300px;
+    border-radius: 10px;
+    transition: transform 0.4s, border-radius 0.3s,  margin-bottom 0.4s ease;
+    &:hover{
+      cursor: pointer;
+      margin-bottom: 10px;
+      transform: scale3d(1.1, 1.1, 1);
+      border-radius: 30px;
+    }
   }
   /*Titulos de las imagenes*/
-  h3{
+  h3 {
     margin-top: 8px;
     color: white;
     text-align: center;
     font-size: 1.3em;
   }
-  h4{
+  h4 {
     color: white;
     text-align: center;
     font-size: 0.9em;
   }
 }
 
-
 /*Estilo para el contenedor del footer*/
 footer {
+  padding-top: 3em;
   background-color: #1c1c1b;
 }
 
@@ -169,13 +188,13 @@ footer {
   }
 
   .fondo_imagen {
-    height: 80vh;
+    height: 60vh;
     & .img {
-      height: 80vh;
+      height: 60vh;
     }
   }
   .container.contenido-pelicula {
-    top: 50%;
+    top: 40%;
   }
 }
 
