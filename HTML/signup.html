@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="icon" href="../IMG/ICO/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./../CSS/signup.css">
+    <title>Fulgor/Signup</title>
+</head>
+<body>
+    <!--CODIGO DEL LOGO-->
+    <div class="logo-container">
+        <div class="logo">
+            <img src="./../IMG/LogoFulgor.png" alt="Logo">
+        </div>
+    </div>
+    <!--CODIGO DEL SIGN UP-->
+    <div class="contenido">
+        <span class="tituloFormulario">Signup</span>
+        <form action="../index.html">
+            <fieldset class="fieldset">
+                <legend><img src="./../IMG/usuario.png" width="30px" id="iconosFormulario" />Usuario </legend>
+                <div class="lineaFormulario">
+                    <div class="conjunto">
+                        <label for="txtNombre">Nombre:</label>
+                        <input type="text" name="nombre" id="txtNombre" minlength="3" maxlength="20" required>
+                    </div>
+                    <div class="conjunto">
+                        <label for="txtPrimerApellido">Primer apellido:</label>
+                        <input type="text" name="primerApellido" id="txtPrimerApellido" minlength="3" maxlength="25"
+                            required>
+                    </div>
+                    <div class="conjunto">
+                        <label for="txtSegundoApellido">Segundo apellido:</label>
+                        <input type="text" name="segundoApellido" id="txtSegundoApellido" minlength="3" maxlength="25"
+                            required>
+                    </div>
+                </div>
+                <div class="lineaFormulario">
+                    <div class="conjunto">
+                        <label for="txtDni">DNI:</label>
+                        <input type="text" name="dni" id="txtDni" pattern="^[0-9]{8}[A-Z]{1}$" required>
+                    </div>
+                    <div class="conjunto">
+                        <label for="txtFechaNacimiento">Fecha de nacimiento:</label>
+                        <input type="date" name="fechaNacimiento" id="dateFechaNacimiento" required>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend><img src="./../IMG/ubicacion.png" width="30px" id="iconosFormulario" /> Dirección </legend>
+                <div class="lineaFormulario">
+                    <div class="conjunto">
+                        <label for="txtCalle">Calle:</label>
+                        <input type="text" name="calle" id="txtCalle" minlength="3" maxlength="20" required>
+                    </div>
+                    <div class="conjunto">
+                        <label for="txtNumero">Número:</label>
+                        <input type="text" name="numero" id="txtNumero" pattern="^[0-9]{3,99999}$" required>
+                    </div>
+                </div>
+                <div class="lineaFormulario">
+                    <div class="conjunto">
+                        <label for="txtCiudad">Ciudad:</label>
+                        <input type="text" name="ciudad" id="txtCiudad" minlength="3" maxlength="20" required>
+                    </div>
+                    <div class="conjunto">
+                        <label for="selcProvincia">Provincia:</label>
+                        <select id="selcProvincia" name="provincia">
+                            <option value="">Seleccione la provincia</option>
+                            <option value="Valladolid">Valladolid</option>
+                            <option value="Boecillo">Boecillo</option>
+                            <option value="Laguna de Duero">Laguna de Duero</option>
+                        </select>
+                    </div>
+                    <div class="conjunto">
+                        <label for="txtCp">Código Postal:</label>
+                        <input type="text" name="cp" id="txtCp" pattern="^[0-9]{5,99999}$" required>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend><img src="./../IMG/correo.png" width="30px" id="iconosFormulario" />Contacto </legend>
+                <div class="lineaFormulario">
+                    <div class="conjunto">
+                        <label for="numbTlf">Número de teléfono:</label>
+                        <input type="tel" name="tlf" id="numbTlf" pattern="^[0-9]{9,999999999}$" required>
+                    </div>
+                    <div class="conjunto">
+                        <label for="emailCorreo">Correo electrónico:</label>
+                        <input type="email" name="correo" id="emailCorreo" required>
+                    </div>
+                </div>
+            </fieldset>
+            <div class=botonCentrado>
+                <input type="button" value="Volver" id="volver" formnovalidate>
+                <input type="button" value="Sign Up" id="registro">
+            </div>
+        </form>
+    </div>
+    <!--SCRIPT PARA VOLVER A LA PAGINA DE LOGIN-->
+    <script>
+        const botonVolver = document.getElementById("volver");
+        const botonRegistro = document.getElementById("registro");
+
+        botonVolver.addEventListener("click", function (evento) {
+            window.location.href = "login.html";
+        });
+
+        botonRegistro.addEventListener("click", function (evento) {
+            if (validarFormulario()) {
+                alert("Acabas de registrate correctamente");
+                window.location.href = "login.html";
+            } else {
+                alert("Por favor, complete todos los campos correctamente.");
+                evento.preventDefault(); 
+            }
+        });
+
+        function validarFormulario() {
+            const nombre = document.getElementById('txtNombre').value;
+            const primerApellido = document.getElementById('txtPrimerApellido').value;
+            const segundoApellido = document.getElementById('txtSegundoApellido').value;
+            const dni = document.getElementById('txtDni').value;
+            const fechaNacimiento = document.getElementById('dateFechaNacimiento').value;
+            const calle = document.getElementById('txtCalle').value;
+            const numero = document.getElementById('txtNumero').value;
+            const ciudad = document.getElementById('txtCiudad').value;
+            const provincia = document.getElementById('selcProvincia').value;
+            const cp = document.getElementById('txtCp').value;
+            const telefono = document.getElementById('numbTlf').value;
+            const correo = document.getElementById('emailCorreo').value;
+
+            return nombre !== '' && primerApellido !== '' && segundoApellido !== '' &&
+                dni !== '' && fechaNacimiento !== '' && calle !== '' && numero !== '' &&
+                ciudad !== '' && provincia !== '' && cp !== '' && telefono !== '' && correo !== '';
+        }
+    </script>
+</body>
+</html>

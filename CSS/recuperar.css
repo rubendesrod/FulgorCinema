@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,300&family=Comfortaa:wght@500&family=Jost&family=Kanit:wght@300&family=Pixelify+Sans&display=swap');
+
+/* ESTILO PARA TODA LA PAGINA */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Asap', sans-serif;
+}
+
+body {
+    background-image: url('./../IMG/cinema2.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+/* ESTILO PARA TODA LA SECCION QUE ALBERGA EL FORMULARIO DE LOGIN */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ESTILO EL CONTENEDOR DEL LOGO */
+.logo-container {
+    position: absolute;
+    top: 1em;
+    margin-left: 4em;
+}     
+
+/* ESTILO PARA LA IMAGEN DEL LOGO */
+.logo img {
+    width: 20em; 
+    height: auto;
+    border-radius: 10px;
+} 
+
+/* ESTILO PARA EL CONTENEDOR DE FORMULARIOS */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 55vh;
+}
+
+/* ESTILO PARA EL FORMULARIO */
+.form {
+    max-width: 550px;
+    width: 100%;
+    padding: 28px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    backdrop-filter: blur(15px) brightness(80%);
+    font-size: 1.2em;
+}
+
+.tituloFormulario {
+    font-size: 1.7em;
+    color: #F9B233;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.form label {
+    color: #F9B233;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+input[type="text"],
+input[type="email"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #ffffff;
+    height: 1.5em;
+    border-bottom: 2px solid #F9B233;
+}
+
+.form textarea {
+    width: 100%;
+    height: 170px;
+    border: 1px solid #F9B233;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 1em;
+    color: #ffffff;
+    background: transparent;
+    resize: vertical;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.form input[type="button"],
+.form input[type="submit"] {
+    width: 48%;
+    height: 50px;
+    border-radius: 40px;
+    background-color: #F9B233;
+    border: 2px solid #000;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    &:hover {
+        transition: 0.3s linear;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0)
+        );
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      }
+}
+
+::placeholder {
+    color: #ffffff; 
+    font-size: 0.7em;
+}
+
+/* ESTILO PARA EL CONTENEDOR DEL MENSAJE */
+.mensaje-container {
+    margin: 0 auto; 
+    padding: 15px;
+    border: 2px solid #F9B233;
+    border-radius: 8px;
+    backdrop-filter: blur(15px) brightness(80%);
+    color: #F9B233;
+    font-size: 1.2em;
+    text-align: center;
+    width: 20%; 
+    box-sizing: border-box; 
+    display: none; 
+}
+
+/* MEDIA QUERYS PARA OBTENER UN DISEÑO RESPONSIVE */
+@media (max-width: 767px) {
+    .logo-container {
+        margin-left: 4em; 
+    }
+
+    .logo img {
+        width: 15em; 
+    }
+
+    .form-container {
+        min-height: 75vh; 
+    }
+
+    .form {
+        padding: 18px; 
+        max-width: 90%;
+    }
+
+    .tituloFormulario {
+        font-size: 1.5em; 
+    }
+
+    .form label {
+        font-size: 1em;
+        margin-bottom: 15px; 
+    }
+
+    .form input,
+    .form textarea {
+        height: 35px;
+        font-size: 0.9em; 
+    }
+
+    .form input[type="button"],
+    .form input[type="submit"] {
+        height: 40px; 
+        font-size: 0.9em; 
+    }
+}

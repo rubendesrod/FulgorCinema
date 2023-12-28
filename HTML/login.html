@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="icon" type="icon" href="../IMG/ICO/favicon.ico"/>
+    <link rel='stylesheet' href='../CSS/login.css'>
+    <title>CinesFulgor/Login</title>
+</head>
+<body>
+    <!--CODIGO DEL LOGO-->
+    <div class="logo-container">
+        <div class="logo">
+            <img src="../IMG/LogoFulgor.png" alt="Logo">
+        </div>
+    </div> 
+    <!--CODIGO DEL LOGIN-->
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form>
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <ion-icon name="person-outline"></ion-icon> 
+                        <input type="text" id="usuario" required >
+                        <label>Usuario</label>
+                    </div>
+                    <div class="inputbox"> 
+                        <ion-icon name="lock-closed-outline"></ion-icon> 
+                        <input type="password" id="password" required > 
+                        <label>Contraseña</label> 
+                    </div>
+                
+                    <div class="forget"> 
+                        <label><input type="checkbox" id="recordar">Recuérdame</label> 
+                        <a href="recuperar_contrasena.html">¿Olvidaste tu contraseña?</a> 
+                    </div>
+                        <button id="volverIndex">Volver</button> 
+                        <button>Log In</button>
+                    <div class="register">
+                        <p>¿No tienes cuenta? <a href="signup.html">Regístrate</a></p>
+                    </div>
+                </form>
+            </div>
+        </div> 
+    </section> 
+    <!--SCRIPT PARA VOLVER A LA PAGINA ANTERIOR-->
+    <script>
+        const botonVolverIndex = document.getElementById("volverIndex");
+        botonVolverIndex.addEventListener("click", function(evento){
+            window.location.href = "../index.html";
+        })
+    </script>
+</body>
+</html>

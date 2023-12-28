@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="icon" href="../IMG/ICO/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./../CSS/recuperar.css">
+    <title>Fulgor/RecuperarContraseña</title>
+</head>
+<body>
+    <!--CODIGO DEL LOGO-->
+    <div class="logo-container">
+        <div class="logo">
+            <img src="./../IMG/LogoFulgor.png" alt="Logo">
+        </div>
+    </div>
+    <!--CODIGO DEL FORMULARIO DE RECUPERACION DE CONTRASEÑA-->
+    <div class="form-container" id="email-form-container">
+        <h2 class="tituloFormulario">Recuperar contraseña</h2><br>
+        <form id="email-form" class="form">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="Escribe tu correo"><br><br>
+            <div class="button-container">
+                <input type="button" id="volver" value="Volver">
+                <input type="button" id="enviar" value="Enviar">
+            </div>
+        </form>
+    </div><br><br>
+    <div id="mensaje-container" class="mensaje-container" style="display: none;">
+    </div>
+    <!-- SCRIPT PARA VOLVER A LA PÁGINA DE LOGIN Y MOSTRAR MENSAJES -->
+    <script>
+        const botonVolver = document.getElementById("volver");
+        const botonEnviar = document.getElementById("enviar");
+        const correo = document.getElementById("correo");
+        const mensajeContainer = document.getElementById("mensaje-container");
+
+        botonVolver.addEventListener("click", function (evento) {
+            window.location.href = "login.html";
+        })
+
+        botonEnviar.addEventListener("click", function (evento) {
+            if (validarCorreo(correo.value)) {
+                mostrarMensaje("Se le ha mandado un correo para restablecer la contraseña");
+                correo.value = '';
+            } else {
+                mostrarMensaje("Por favor, introduce una dirección de correo electrónico válida");
+                correo.value = '';
+            }
+        })
+
+        function validarCorreo(correo) {
+            const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regexCorreo.test(correo);
+        }
+
+        function mostrarMensaje(mensaje) {
+            mensajeContainer.textContent = mensaje;
+            mensajeContainer.style.display = "block";
+        }
+    </script>
+</body>
+</html>

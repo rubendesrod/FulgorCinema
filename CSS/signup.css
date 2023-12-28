@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,300&family=Comfortaa:wght@500&family=Jost&family=Kanit:wght@300&family=Pixelify+Sans&display=swap");
+
+/* ESTILO PARA TODA LA PAGINA */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Asap", sans-serif;
+}
+
+body {
+  background-image: url("./../IMG/cinema2.jpg");
+  background-size: cover; /* Cubre todo el fondo */
+  background-position: center; /* Centra la imagen en el fondo */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  background-attachment: fixed; /* Fija la imagen de fondo, para que no se desplace con el contenido de la página */
+}
+
+/* ESTILO EL CONTENEDOR DEL LOGO */
+.logo-container {
+  position: absolute;
+  top: 1em;
+  margin-left: 4em;
+}
+
+/* ESTILO PARA LA IMAGEN DEL LOGO */
+.logo img {
+  width: 20em;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ESTILO PARA LA CLASE CONTENIDO */
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4.6em;
+}
+
+/* ESTILO PARA LOS ELEMENTOS DEL FORMULARIO DE SIGNUP */
+.lineaFormulario {
+  display: flex;
+  flex-direction: row;
+}
+
+.conjunto {
+  display: flex;
+  flex-direction: column;
+  padding-right: 25px;
+}
+
+.tituloFormulario {
+  letter-spacing: 2px;
+  color: #f9b233;
+  font-size: 2em;
+  padding: 50px 10px 0px 10px;
+}
+
+#txtNombre,
+#txtPrimerApellido,
+#txtSegundoApellido,
+#txtDni {
+  width: 9.8em;
+}
+
+#dateFechaNacimiento,
+#selcProvincia {
+  width: 165px;
+}
+
+#txtCiudad {
+  width: 10em;
+}
+
+#txtCalle {
+  width: 320px;
+}
+
+#txtNumero {
+  width: 14em;
+}
+
+#numbNumero,
+#numbCp {
+  width: 52px;
+}
+
+#emailCorreo {
+  width: 240px;
+}
+
+form {
+  padding: 10px;
+  border-radius: 20px;
+  width: 650px;
+}
+
+fieldset {
+  border: 0px solid #ccc;
+  border-radius: 20px;
+  padding-left: 30px;
+  padding-bottom: 40px;
+  margin-bottom: 42px;
+  backdrop-filter: blur(15px) brightness(80%);
+}
+
+#iconosFormulario {
+  vertical-align: middle;
+  padding: 0px 10px 0px 5px;
+}
+
+legend {
+  color: #f9b233;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  color: white;
+}
+
+select {
+  cursor: pointer;
+}
+
+.botonCentrado {
+  display: flex;
+  margin-left: 20%;
+}
+
+input[type="button"],
+input[type="submit"] {
+  color: rgb(0, 0, 0);
+  background-color: #f9b233;
+  border: 2px solid #000000;
+  width: 10em;
+  height: 3em;
+  font-size: 1.1em;
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 1em;
+  &:hover {
+    transition: 0.3s linear;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+}
+
+input[type="text"] {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.2em;
+  color: #ffffff;
+  height: 1.5em;
+  border-bottom: 2px solid #f9b233;
+}
+
+.conjunto input[type="date"] {
+  padding: 8px;
+  border: 1px solid #f9b233;
+  border-radius: 5px;
+  outline: none;
+  color: #000000;
+}
+
+#genero {
+  padding: 8px;
+  border: 2px solid #f9b233;
+  border-radius: 5px;
+  outline: none;
+  color: #000000;
+}
+
+#selcProvincia {
+  padding: 8px;
+  border: 1px solid #f9b233;
+  border-radius: 5px;
+  width: 13em;
+  outline: none;
+  color: #000000;
+}
+
+input[type="tel"],
+input[type="email"] {
+  background: transparent;
+  width: 18.5em;
+  border: none;
+  outline: none;
+  font-size: 1.2em;
+  color: #ffffff;
+  height: 1.5em;
+  border-bottom: 2px solid #f9b233;
+}
+
+/* MEDIA QUERYS PARA OBTENER UN DISEÑO RESPONSIVE */
+@media only screen and (max-width: 700px) {
+  body {
+    margin: 0;
+  }
+
+  .logo-container {
+    margin-left: 11em;
+  }
+
+  .contenido {
+    margin-top: 10em;
+  }
+
+  .tituloFormulario {
+    margin-left: 10em;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  fieldset {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .botonCentrado {
+    display: flex;
+    justify-content: center;
+    margin: 20px 330px;
+  }
+}
+
+@media (min-width: 830px) and (max-width: 1040px) {
+  .logo-container {
+    top: 2em;
+  }
+
+  .logo img {
+    width: 250px;
+  }
+
+  .contenido {
+    margin-top: 10em;
+  }
+
+  fieldset {
+    width: 9em;
+  }
+
+  .tituloFormulario {
+    font-size: 1.7em;
+  }
+
+  #txtCalle {
+    width: 250px;
+  }
+
+  #numbNumero,
+  #numbCp {
+    width: 50px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .contenido {
+    margin-top: 10em;
+  }
+}
