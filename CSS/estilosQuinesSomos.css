@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,300&family=Comfortaa:wght@500&family=Jost&family=Kanit:wght@300&family=Pixelify+Sans&display=swap");
+
+/* ESTILOS QUE APLICA A TODO  */
+* {
+  font-family: "Asap", sans-serif;
+}
+
+/* ESTILOS MENU NAVEGACION  */
+.nav {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  /* Coloca la barra de navegación sobre el video */
+}
+
+.navbar-brand {
+  padding-left: 1em;
+  /* Tamaño de la imagen del logo */
+  width: 8em;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #8f8989;
+}
+
+.nav-item.active a {
+  color: #f9b233;
+  font-weight: bold;
+}
+
+/* FIN ESTILOS DE NAVEGACION  */
+
+/* ESTILOS VIDEO  */
+#video-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  /* Ocupe toda la pantalla */
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ajusta el tamaño del video para cubrir completamente el contenedor sin distorsionar la proporción original*/
+}
+
+/* FIN ESTILOS VIDEO  */
+
+/* ESTILOS CONTENIDO ENCIMA DEL VIDEO  */
+.contenidoVideo {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  /* Poscion en la pantalla */
+  transform: translate(-50%, -40%);
+  z-index: 1;
+  /* Coloca el texto y el botón por encima del video */
+  width: 100%;
+}
+
+.textoPrincipal {
+  text-align: justify;
+  color: white;
+  font-size: 1.2em;
+}
+
+.botonConocerMas {
+  text-decoration: none;
+  color: #1c1c1b;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #f9b233;
+  border-radius: 20px;
+  width: 4em;
+  &:hover {
+    transition: 0.5s;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+}
+/* FIN ESTILOS CONTENIDOS ENCIMA DEL VIDEO  */
+
+/* Esta clase se crea para salvar por dentras el espacio del video  */
+.contenido {
+  height: 100vh;
+  /* Ocupe toda la pantalla */
+}
+
+/* ESTILOS SERVICIOS  */
+.container-servicios {
+  margin-bottom: 100px;
+}
+
+.titulo-servicios {
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.card {
+  background-color: #1c1c1b;
+  width: 90%;
+  height: 100%;
+  transition: box-shadow 0.3s ease;
+  /*Transición suave al resplandor */
+}
+
+.card-img-top {
+  width: 80px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #f9b233;
+  text-align: center;
+}
+
+.card-text {
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgb(28, 28, 27, 0.8);
+  /* Resplandor trasero de las cartas  */
+}
+
+/* FIN ESTILOS SERVICIOS  */
+
+/* ESTILOS NUESTRA HISTORIA  */
+.container-historia {
+  background-color: #1c1c1b;
+  margin-bottom: 100px;
+  height: 350px;
+}
+
+.titulo-historia {
+  font-size: 2em;
+  font-weight: bold;
+  color: #f9b233;
+  text-align: center;
+}
+
+.texto-historia {
+  text-align: justify;
+  color: white;
+  font-size: 1em;
+}
+
+/* FIN ESTILOS NUESTRA HISTORIA  */
+
+/* ESTILOS EQUIPO */
+.container-equipo {
+  border: #1c1c1b solid;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 100px;
+}
+
+.titulo-equipo {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  color: #1c1c1b;
+}
+
+.container-equipo:hover {
+  box-shadow: 0 0 20px rgb(28, 28, 27, 0.8);
+  /* Respandor */
+}
+
+.nombres {
+  font-weight: bold;
+  color: #1c1c1b;
+  font-size: 1.5em;
+}
+
+.descripcion {
+  text-align: justify;
+}
+
+.retratos {
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.retratos:hover {
+  transform: scale(1.1);
+  /* Aumento de tamaño */
+  filter: grayscale(50%);
+  /* Filtro de escala de gris */
+}
+
+/* FIN ESTILOS EQUIPO */
+
+/* ESTILOS TESTIMONIOS */
+.container-terstimonios {
+  padding: 0;
+}
+
+.container-contenidoTestimonio {
+  padding-bottom: 50px;
+}
+
+.carousel-item {
+  background-color: #1c1c1b;
+  min-height: 500px;
+}
+
+.titulo-testimonio {
+  font-size: 2em;
+  font-weight: bold;
+  color: #f9b233;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.texto-testimonio {
+  color: white;
+  text-align: justify;
+  font-size: 1em;
+}
+
+/* Cambiar el color del boton inferior activado */
+.carousel-indicators .active {
+  background-color: #f9b233 !important;
+}
+
+/* FIN ESTILOS TESTIMONIOS */
+
+/* ESTILOS FOOTER */
+footer {
+  padding-top: 50px;
+  background-color: #1c1c1b;
+}
+/* FIN ESTILOS FOOTER  */
+
+/* MEDIAQUERYS*/
+
+@media (width <1400px) {
+  .nombres {
+    font-size: 1.2em;
+  }
+}
+
+@media (width <1200px) {
+  .carousel-item {
+    min-height: 550px;
+  }
+  .nombres {
+    font-size: 1em;
+  }
+}
+
+@media (width <992px) {
+  .carousel-item {
+    min-height: 750px;
+  }
+
+  .container-historia {
+    min-height: 600px;
+  }
+}
+
+@media (width <576px) {
+  .carousel-item {
+    min-height: 850px;
+  }
+  .container-historia {
+    min-height: 550px;
+  }
+}

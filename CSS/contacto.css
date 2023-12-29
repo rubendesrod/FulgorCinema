@@ -133,6 +133,10 @@ input[type="email"] {
 /* ESTILO PARA EL CONTENEDOR DEL FOOTER */
 footer{
     background-color: #1c1c1b;
+    a {
+        color: white;
+        cursor: pointer;
+    }
 }
 
 

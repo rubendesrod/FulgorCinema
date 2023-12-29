@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../IMG/ICO/favicon.ico" type="image/x-icon">
+  <!-- BOOSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- ICONOS FOTTER -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="..." />
+  <!-- CSS -->
+  <link rel="stylesheet" href="../CSS/estilosQuinesSomos.css"> <!-- Bootstrap CSS -->
+  <title>Quienes somos</title>
+</head>
+
+<body>
+
+  <!-- INICIO MENU NAVEGACION  -->
+  <nav class="navbar navbar-expand-lg nav">
+    <div class="container-fluid">
+      <img class="navbar-brand" src="../IMG/LogoFulgor.png" alt="Fulgor logo" />
+      <!-- En las pantallas pequeñas o moviles el menu de navegacion aparece como una hamburguesa  -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="../IMG/lista.png" />
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!--ms es margin left auto, va a dejar todo el margen posible que pueda a la izq-->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">INICIO </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./quienesSomos.html">QUIENES SOMOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./taquilla.html">TAQUILLA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=".login.html">LOGIN</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- FIN MENU NAVEGACION  -->
+
+  <div id="video-container">
+    <video autoplay loop muted>
+      <source src="../IMG/videos/videoFulgor4.MP4" type="video/mp4" />
+    </video>
+    <div class="contenidoVideo">
+      <div class="container-fluid">
+        <div class="row d-md-flex justify-content-center">
+          <div class="col-12 col-md-6">
+            <p class="textoPrincipal">
+              En el corazón de la ciudad, donde la magia del cine cobra vida,
+              surge Fulgor, un cine único que celebra la grandeza del séptimo
+              arte. Este santuario cinematográfico ha sido creado para sumergir a
+              los amantes del cine en una experiencia sin igual, donde cadaa
+              proyección es un viaje fascinante a través de las mejores películas
+              de la historia.
+            </p>
+          </div>
+          <div class="row">
+            <!-- pt padding-top  -->
+            <div class="col-12 text-center pt-3">
+              <!-- Se utiliza un enlace para hacer un boton ancla para que cuando pinche sobre desplace al contenido -->
+              <a class="botonConocerMas" href="#contenido">CONOCER MÁS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- div para salvar la parte trasera del video y el resto del contenido se muestre a continuación -->
+  <div class="contenido"></div>
+
+  <!-- INICIO TARJETAS  -->
+  <!-- id contenido para el ancla con el boton de conocer mas  -->
+  <div class="container-servicios container" id="contenido">
+    <div class="row">
+      <div class="col-sm-12 col-12">
+        <p class="titulo-servicios">SERVICIOS</p>
+      </div>
+    </div>
+    <div class="row">
+      <!-- mb-3 margin-botton  -->
+      <div class="col-12 col-sm-12 col-md-3 mb-3">
+        <div class="card mx-auto">
+          <img src="../IMG/quienesSomos/cine.png" class="card-img-top" alt="icono cine" />
+          <div class="card-body">
+            <p class="card-title">PELÍCULAS</p>
+            <p class="card-text">
+              Descubre emocionantes clásicos en nuestras pantallas. La mejor
+              experiencia de cine te espera.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-3 mb-3">
+        <div class="card mx-auto">
+          <img src="../IMG/quienesSomos/comida.png" class="card-img-top" alt="icono comida" />
+          <div class="card-body">
+            <p class="card-title">COMIDA</p>
+            <p class="card-text">
+              Deléitate con nuestras palomitas y otras opciones gastronómicas
+              mientras disfrutas de la película.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-3 mb-3">
+        <div class="card mx-auto">
+          <img src="../IMG/quienesSomos/bebidas.png" class="card-img-top" alt="icono bebidas" />
+          <div class="card-body">
+            <p class="card-title">BEBIDAS</p>
+            <p class="card-text">
+              Desde bebidas clásicas hasta cócteles exclusivos, encuentra la
+              bebida perfecta para tu película.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-3 mb-3">
+        <div class="card mx-auto">
+          <img src="../IMG/quienesSomos/guarderia.png" class="card-img-top" alt="icono guarderia" />
+          <div class="card-body">
+            <p class="card-title">GUARDERÍA</p>
+            <p class="card-text">
+              Disfruta sin preocupaciones con nuestro servicio de guardería
+              para los más pequeños.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIN TARJETAS  -->
+  <div class="container-historia container-fluid d-flex align-items-center justify-content-center">
+    <div class="row ">
+      <div class="col-12 text-center col-lg-5">
+        <img src="../IMG/videos/GifLogo.gif" alt="gif logo" width="700px" class="img-fluid" />
+      </div>
+      <div class="col-12 col-lg-5 align-self-center ">
+        <p class="titulo-historia">NUESTRA HISTORIA</p>
+        <p class="texto-historia">
+          El nombre 'Fulgor' para nuestro cine es una conexión profunda con el
+          significado de la palabra. En su esencia, encontramos la representación de la luz, y
+          para nosotros, este término encapsula la brillantez y el resplandor que caracterizan a nuestro cine. En
+          Fulgor, nos esforzamos por ser un faro cinematográfico donde converge la luz de las mejores películas de la
+          historia del cine. Nuestro logo es una expresión visual de la luminosidad y la calidad que brindamos a cada
+          proyección. Bienvenidos a Fulgor, donde la luz de las grandes historias ilumina cada pantalla.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- INICIO EQUIPO -->
+  <div class="container-equipo container">
+    <div class="row">
+      <div class="col-sm-12 col-12">
+        <h2 class="titulo-equipo">EQUIPO</h2>
+      </div>
+    </div>
+    <div class="rubenp">
+      <div class="row">
+        <div class="col-12 col-md-2 col-xxl-5"></div>
+        <div class="col-12 col-md-10 col-xxl-7">
+          <div class="row">
+            <!-- Dejar todo el margen que pueda arriba  -->
+            <div class="col-12 text-center text-md-start col-md-6 mt-auto">
+              <p class="nombres">RUBEN PEREZ GARCÍA</p>
+            </div>
+            <div class="col-12 text-center text-md-end col-md-6">
+              <img src="../IMG/quienesSomos/rubenp.png" alt="imagen Rueben Perez" width="250" class="img-fluid retratos" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 ">
+              <p class="descripcion">Rubén, un visionario que ha logrado fusionar los mundos de
+                la programación y el periodismo. Su habilidad para <strong>tejer historias </strong>no se limita solo a
+                líneas de código,
+                también es un periodista consumado, utilizando la pluma para dar vida a películas cautivadoras.
+                Su enfoque único combina la lógica estructurada del mundo digital con la expresión creativa del
+                periodismo, creando una sinergia única que refleja su versatilidad y pasión.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="andrea">
+      <div class="row">
+        <div class="col-12 col-md-10 col-xxl-7">
+          <div class="row flex-column-reverse flex-md-row">
+            <!-- Dejar todo el margen que pueda arriba  -->
+            <div class="col-12 text-center text-md-start col-md-6">
+              <img src="../IMG/quienesSomos/andrea.png" alt="imagen Andrea" width="300" class="img-fluid retratos" />
+            </div>
+            <div class="col-12 text-center text-md-end col-md-6 mt-auto">
+              <p class="nombres">ANDREA RODRÍGUEZ RINCÓN</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 ">
+              <p class="descripcion">Andrea, destacada por el <strong>diseño</strong> dentro de la programación,
+                personifica la síntesis perfecta entre funcionalidad y estética. Su habilidad como programadora
+                y diseñadora va más allá de la mera creación de interfaces digitales, es una narradora visual que
+                cautiva a la audiencia cinematográfica con su atención al detalle y su visión artística.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-2 col-xxl-5">
+        </div>
+      </div>
+    </div>
+
+    <div class="rubend">
+      <div class="row">
+        <div class="col-12 col-md-2 col-xxl-5 "></div>
+        <div class="col-12 col-md-10 col-xxl-7 ">
+          <div class="row">
+            <!-- Dejar todo el margen que pueda arriba  -->
+            <div class="col-12 text-center text-md-start col-md-6 mt-auto">
+              <p class="nombres">RUBEN DESCALZO RODRÍGUEZ</p>
+            </div>
+            <div class="col-12 text-center text-md-end col-md-6">
+              <img src="../IMG/quienesSomos/rubend.png" alt="imagen Ruben Descalzo" width="250" class="img-fluid retratos" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 ">
+              <p class="descripcion"> Rubén, prodigioso programador con una sed insaciable de conocimiento,
+                personifica la esencia de la <strong>innovación</strong> en el mundo digital. Su dedicación incansable a
+                la mejora
+                continua y su pasión por aprender nuevas tecnologías lo destacan como un pionero en constante
+                evolución. Su compromiso con la innovación no solo se traduce en líneas de código brillantes, sino
+                también en experiencias que capturan la imaginación de los amantes del cine.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FIN EQUIPO -->
+
+
+  <!-- INICIO CARRUSEL TESTIMONIOS -->
+  <div class="container-terstimonios container-fluid ">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+      <div class="carousel-indicators">
+        <!-- Botones inferiores del carrusel, por defecto el primero siempre esta activado -->
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <!-- Es el elemento activado del carrrusel  -->
+        <!-- data-bs-interval se utiliza para establecer el intervalo de tiempo ( milisegundos) entre las transiciones de las diapositivas del carrusel -->
+        <div class="carousel-item active" data-bs-interval="2000">
+          <div class="carousel-caption d-block">
+            <div class="container-contenidoTestimonio container-fluid">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-5">
+                  <p class="titulo-testimonio">TESTIMONIOS</p>
+                  <p class="texto-testimonio">
+                    <strong>DIANA:</strong> "El cine Fulgor ofrece una experiencia cinematográfica excepcional.
+                    La calidad de proyección y sonido es impresionante, sumergiendo al espectador
+                    en la trama de cada película. Además, su selección de películas abarca desde
+                    emocionantes estrenos hasta joyas cinematográficas olvidadas, brindando variedad
+                    para todos los gustos”
+                  </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-7 pt-5 align-self-center">
+                  <img src="../IMG/quienesSomos/testimonio1.jpg" alt="foto clientes" width="400px" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="carousel-caption d-block">
+            <div class="container-contenidoTestimonio container-fluid">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-5 ">
+                  <p class="titulo-testimonio">TESTIMONIOS</p>
+                  <p class="texto-testimonio">
+                    <strong>JULIÁN:</strong>"El mejor cine de la ciudad. La atmósfera única del lugar, combinada con la
+                    atención al detalle en la proyección y el sonido, crea una experiencia inolvidable. Desde clásicos
+                    atemporales hasta las últimas novedades, el cine Fulgor me ha sorprendido con su ecléctica selección
+                    de películas. Definitivamente, un lugar que recomendaría a cualquier amante del cine".
+                  </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-7 pt-5 align-self-center">
+                  <img src="../IMG/quienesSomos/testimonio2.jpg" alt="foto clientes" width="400px" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption d-block">
+            <div class="container-contenidoTestimonio container-fluid">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-5 ">
+                  <p class="titulo-testimonio">TESTIMONIOS</p>
+                  <p class="texto-testimonio">
+                    <strong>MARTA:</strong> "Las instalaciones son modernas y cómodas, con asientos espaciosos y una
+                    calidad de sonido que te sumerge en la película. Pero lo que realmente destaca es la oferta
+                    gastronómica, no es tu típico cine de palomitas y refrescos. La variedad de opciones, desde
+                    deliciosos bocadillos hasta aperitivos gourmet, hace que la experiencia sea aún más memorable.
+                  </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-7 pt-5 align-self-center">
+                  <img src="../IMG/quienesSomos/testimonio3.jpg" alt="foto clientes" width="400px" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Botones de flechas laterales  -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <!-- FIN CARRUSEL TESTIMONIOS  -->
+
+  <!--CODIGO DEL FOOTER-->
+  <footer class="text-white text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase fw-bold">FULGOR CINEMA</h5>
+          <p>
+            El cine de tus sueño el cual despertará tu luz interior en cada
+            pelicula, cada momento destacado y cada momentos de ensueño.
+          </p>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase fw-bold">Contactanos</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <i class="fas fa-envelope me-2"></i>fulgorcinema@gmail.com
+            </li>
+            <li>
+              <i class="fas fa-home me-2"></i>C/ Barrocal de Valladolid
+            </li>
+            <li>
+              <i class="fas fa-phone me-2"></i>+34 640685953
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-0 fw-bold">Danos tu Follow</h5>
+          <p class="mb-0">Todo lo nuevo en redes</p>
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a data-mdb-ripple-init class="btn btn-floating m-1" style="background-color:#f9b233" href="#!"
+              role="button"><i class="fab fa-facebook-f text-dark"></i></a>
+            <!-- Twitter -->
+            <a data-mdb-ripple-init class="btn btn-floating m-1" style="background-color: #f9b233" href="#!"
+              role="button"><i class="fab fa-twitter text-dark"></i></a>
+            <!-- Instagram -->
+            <a data-mdb-ripple-init class="btn btn-floating m-1" style="background-color: #f9b233" href="#!"
+              role="button"><i class="fab fa-instagram text-dark"></i></a>
+          </section>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2024 Copyright:FulgorCinema
+    </div>
+    <!-- Copyright -->
+  </footer>
+</body>
+
+</html>

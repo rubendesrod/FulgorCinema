@@ -119,6 +119,10 @@ dialog{
 /*Estilo para el contenedor del footer*/
 footer{
   background-color: #1c1c1b;
+  a {
+    color: white;
+    cursor: pointer;
+  }
 }
 
 /*Aqui estan las mediaquerys*/

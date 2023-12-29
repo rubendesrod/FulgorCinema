@@ -180,6 +180,10 @@
 footer {
   padding-top: 3em;
   background-color: #1c1c1b;
+  a {
+    color: white;
+    cursor: pointer;
+  }
 }
 
 @media (width < 992px) {
