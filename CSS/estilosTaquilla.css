@@ -32,7 +32,10 @@
 }
 
 .fondo_imagen {
-  height: 60vh;
+  height: 500px;
+  background-size: cover;
+  /* Pelicula precargada */
+  background-image: url("../IMG/interestellar.jpg");
   & .img {
     position: absolute;
     z-index: 0;
@@ -154,8 +157,8 @@
     width: 200px;
     height: 300px;
     border-radius: 10px;
-    transition: transform 0.4s, border-radius 0.3s,  margin-bottom 0.4s ease;
-    &:hover{
+    transition: transform 0.4s, border-radius 0.3s, margin-bottom 0.4s ease;
+    &:hover {
       cursor: pointer;
       margin-bottom: 10px;
       transform: scale3d(1.1, 1.1, 1);
@@ -186,21 +189,165 @@ footer {
   }
 }
 
-@media (width < 992px) {
-  .img {
-    content: url("../IMG/batman_resize.jpg");
-  }
-
-  .fondo_imagen {
-    height: 60vh;
-    & .img {
-      height: 60vh;
+/*MEDIA QUERYS*/
+@media (width < 1440px) {
+  .cartelera {
+    /*Imagenes dentro de la cartelera*/
+    img {
+      width: 170px;
+      height: 270px;
     }
+  }
+}
+
+@media (width < 1260px) {
+  .cartelera {
+    /*Imagenes dentro de la cartelera*/
+    img {
+      width: 150px;
+      height: 240px;
+    }
+    /*Titulos de las imagenes*/
+    h3 {
+      font-size: 1em;
+    }
+    h4 {
+      font-size: 0.6em;
+    }
+  }
+}
+
+@media (width < 1260px) {
+  .cartelera {
+    /*Imagenes dentro de la cartelera*/
+    img {
+      width: 130px;
+      height: 210px;
+    }
+  }
+}
+
+@media (width < 1020px) {
+  .cartelera {
+    /*Imagenes dentro de la cartelera*/
+    img {
+      width: 120px;
+      height: 180px;
+    }
+  }
+}
+
+@media (width < 973px) {
+  .fondo_imagen {
+    height: 600px;
+    background-position: center center;
   }
   .container.contenido-pelicula {
     top: 40%;
   }
+  .cartelera {
+    /*Imagenes dentro de la cartelera*/
+    img {
+      width: 115px;
+      height: 175px;
+    }
+    /*Titulos de las imagenes*/
+    h3 {
+      font-size: 0.8em;
+    }
+    h4 {
+      font-size: 0.5em;
+    }
+  }
 }
+
+@media (width < 930px) {
+  .cartelera {
+    /*Imagenes dentro de la cartelera*/
+    img {
+      width: 200px;
+      height: 300px;
+    }
+    /*Titulos de las imagenes*/
+    h3 {
+      font-size: 1.3em;
+    }
+    h4 {
+      font-size: 0.7em;
+    }
+  }
+}
+
+@media (width < 767px) {
+  .horarios{
+    margin-bottom: 1.4em;
+  }
+  .cartelera {
+    /*Imagenes dentro de la cartelera*/
+    img {
+      width: 160px;
+      height: 240px;
+    }
+    /*Titulos de las imagenes*/
+    h3 {
+      font-size: 1.1em;
+    }
+    h4 {
+      font-size: 0.8em;
+    }
+  }
+}
+
+@media (width < 648px) {
+  .cartelera {
+    /*Imagenes dentro de la cartelera*/
+    img {
+      width: 130px;
+      height: 200px;
+    }
+    /*Titulos de las imagenes*/
+    h3 {
+      font-size: 1.3em;
+    }
+    h4 {
+      font-size: 0.7em;
+    }
+  }
+}
+
+@media (width < 628px) {
+  .horarios{
+    font-size: 0.8em;
+    ul{
+      /*Button dentro del ul*/
+    button {
+      svg {
+        
+        &:hover {
+          transform: scale(1.2);
+          fill: #946920;
+        }
+      }
+    }
+    }
+  }
+  .cartelera {
+    /*Imagenes dentro de la cartelera*/
+    img {
+      width: 120px;
+      height: 170px;
+    }
+    /*Titulos de las imagenes*/
+    h3 {
+      font-size: 1em;
+    }
+    h4 {
+      font-size: 0.7em;
+    }
+  }
+}
+
+
 
 @media (width < 376px) {
   .container.contenido-pelicula {

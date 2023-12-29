@@ -254,6 +254,10 @@ video {
 footer {
   padding-top: 50px;
   background-color: #1c1c1b;
+  a {
+    color: white;
+    cursor: pointer;
+  }
 }
 /* FIN ESTILOS FOOTER  */
 

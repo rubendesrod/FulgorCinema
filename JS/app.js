@@ -5,7 +5,8 @@ const cambiarBanner = function (evento) {
   interfaz.titulo.textContent = peliculas[pelicula].titulo;
   interfaz.descripcion.textContent = peliculas[pelicula].descripcion;
   interfaz.puntuacion.attributes.src.nodeValue = peliculas[pelicula].puntuacion;
-  interfaz.imagenFondo.attributes.src.nodeValue = peliculas[pelicula].imagen
+  // interfaz.imagenFondo.attributes.src.nodeValue = peliculas[pelicula].imagen
+  interfaz.imagenFondo.style.backgroundImage = 'url('+ peliculas[pelicula].imagen+')';
   // Para que mueva al usuario hasta la parte de arriba
   document.getElementById('logo').scrollIntoView({ behavior: 'smooth' });
 };
