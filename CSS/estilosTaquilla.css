@@ -6,7 +6,7 @@
 
 /*Estilo para el menu de navegacion header*/
 .header {
-  position: absolute;
+  /* position: absolute; */
   z-index: 1;
   /*Estilo para los enlaces del navegdor*/
   & .nav-link {
@@ -32,17 +32,10 @@
 }
 
 .fondo_imagen {
-  height: 500px;
+  min-height: 500px;
   background-size: cover;
   /* Pelicula precargada */
   background-image: url("../IMG/interestellar.jpg");
-  & .img {
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 60vh;
-    object-fit: cover;
-  }
 }
 
 .contenedor {
@@ -50,10 +43,7 @@
 }
 
 .container.contenido-pelicula {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding-top: 50px;
   #titulo {
     font-weight: bold;
     color: #f9b233;
@@ -96,24 +86,26 @@
     list-style: none;
     display: flex;
     flex-direction: row;
+    width: 200px;
     /*Item list*/
     li {
       margin: 3px;
-      &:nth-child(2),
-      &:nth-child(4) {
+      &:nth-child(1),
+      &:nth-child(3) {
         /* Estilos para el primer y tercer li */
         font-size: 0.8em;
         opacity: 0.3;
       }
     }
-    /*Button dentro del ul*/
-    button {
-      svg {
-        transition: transform 0.3s, fill 0.3s ease-in-out;
-        &:hover {
-          transform: scale(1.5);
-          fill: #946920;
-        }
+  }
+  /*Button dentro del ul*/
+  button {
+    height: 35px;
+    svg {
+      transition: transform 0.3s, fill 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.5);
+        fill: #946920;
       }
     }
   }
@@ -240,7 +232,7 @@ footer {
 @media (width < 973px) {
   .fondo_imagen {
     height: 600px;
-    background-position: center center;
+    background-position: center right;
   }
   .container.contenido-pelicula {
     top: 40%;
@@ -278,11 +270,46 @@ footer {
   }
 }
 
-@media (width < 767px) {
-  .horarios{
+@media (width < 768px) {
+  .cartelera {
+    padding-top: 9em;
+  }
+  .boton_comprar_entrada {
+    margin: auto;
+  }
+}
+
+@media (width < 628px) {
+  .horarios {
     margin-bottom: 1.4em;
+    #horarios_dias {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+    ul {
+      width: 175px;
+      li {
+        font-size: 1.3em;
+        &:nth-child(1),
+        &:nth-child(3) {
+          font-size: 1.1em;
+        }
+      }
+    }
+
+    .boton_comprar_entrada {
+      padding-top: 1.3em;
+      margin: auto;
+    }
+    a {
+      margin-top: 1em;
+      font-size: 1.3em;
+      padding: 0.6em;
+    }
   }
   .cartelera {
+    padding-top: 7em;
     /*Imagenes dentro de la cartelera*/
     img {
       width: 160px;
@@ -316,19 +343,18 @@ footer {
 }
 
 @media (width < 628px) {
-  .horarios{
+  .horarios {
     font-size: 0.8em;
-    ul{
+    ul {
       /*Button dentro del ul*/
-    button {
-      svg {
-        
-        &:hover {
-          transform: scale(1.2);
-          fill: #946920;
+      button {
+        svg {
+          &:hover {
+            transform: scale(1.2);
+            fill: #946920;
+          }
         }
       }
-    }
     }
   }
   .cartelera {
@@ -346,8 +372,6 @@ footer {
     }
   }
 }
-
-
 
 @media (width < 376px) {
   .container.contenido-pelicula {
