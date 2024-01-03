@@ -106,7 +106,7 @@ const peliculas = {
     puntuacion: "../IMG/puntuacion/estrellas3.png",
     horas: ["12:30", "14:00", "16:30", "18:00", "22:30"],
     movilImagenClass: "center center",
-    movilImagenClass: "center center",
+   
   },
   // Cartelera Barbie .
   barbie: {
@@ -155,3 +155,5 @@ let imagenes = document.querySelectorAll(".pelicula");
 imagenes.forEach((imagen) => {
   imagen.addEventListener("click", cambiarBanner);
 });
+
+

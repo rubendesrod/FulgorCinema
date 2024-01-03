@@ -51,26 +51,29 @@
   #descripcion {
     color: white;
   }
-  .boton_verTrailer {
-    font-weight: bold;
-    font-size: 1.1em;
-    border: 0;
-    background-color: #f9b233;
+}
+
+.boton_verTrailer,
+.boton_comprarEntrada {
+  font-weight: bold;
+  font-size: 1em;
+  border: 0;
+  background-color: #f9b233 !important;
+  border-radius: 20px;
+  width: 10em;
+  height: 35px;
+  &:hover {
+    transition: 0.5s;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    ) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
-    width: 8em;
-    &:hover {
-      transition: 0.5s;
-      background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0)
-      );
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    }
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   }
 }
 
@@ -254,6 +257,9 @@ footer {
 }
 
 @media (width < 930px) {
+  .container.contenido-pelicula {
+    padding-top: 20px;
+  }
   .cartelera {
     /*Imagenes dentro de la cartelera*/
     img {

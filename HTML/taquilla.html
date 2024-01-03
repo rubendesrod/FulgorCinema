@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taquilla</title>
   <link rel="shortcut icon" href="../IMG/ICO/favicon.ico" type="image/x-icon" />
+
   <link rel="stylesheet" href="../CSS/estilosTaquilla.css" />
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     integrity="..." />
   <!-- Font Awesome CSS -->
@@ -16,8 +17,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-
-
+  <link rel="stylesheet" href="../CSS/pago.css">
 </head>
 
 <body>
@@ -126,7 +126,8 @@
         </div>
         <!--Columna boton comprar entrada-->
         <div class="col-auto boton_comprar_entrada">
-          <a href="#">Comprar Entrada</a>
+          <button class="boton_comprarEntrada" data-toggle="modal" data-bs-toggle="modal"
+            data-bs-target="#modalPago">Comprar Entrada</button>
         </div>
       </div>
     </div>
@@ -253,6 +254,72 @@
     </div>
     <!-- Copyright -->
   </footer>
+  <!-- Codigo modal comprar entada  -->
+  <div class="modal face" tabindex="-1" id="modalPago" aria-labelledby="modalPago" role="dialog"
+    aria-labelledby="ventana" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center" role="document">
+      <div class="modal-content">
+        <div class="container container-modal">
+          <!-- boton cerrar el modal  -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <form action="../index.html">
+            <div class="col-md-12 col-12">
+              <label for="card-number">Nº DE TARJETA</label>
+              <input name="card-number" class="card-number" type="text" placeholder="5886 5912 3412 3456" required>
+            </div>
+            <div class="col-md-12 col-12">
+              <label for="card-name">TITULAR</label>
+              <input name="card-name" class="card-name" type="text" placeholder="CARLOS SANZ MARTIN" required>
+            </div>
+            <div class="row d-flex flex-md-row flex-column pb-3 col-md-12 col-12">
+              <div class="col-12 col-md-9">
+                <label for="month">FECHA DE CADUCIDAD</label>
+                <div class="d-flex flex-md-row gap-2">
+                  <select class="form-select select-fecha-caducidad">
+                    <option value="Month" selected disabled>Mes</option>
+                    <option value="January">Enero</option>
+                    <option value="February">Febrero</option>
+                    <option value="March">Marzo</option>
+                    <option value="April">Abril</option>
+                    <option value="May">Mayo</option>
+                    <option value="June">Junio</option>
+                    <option value="July">Julio</option>
+                    <option value="August">Agosto</option>
+                    <option value="September">Septiembre</option>
+                    <option value="October">Octubre</option>
+                    <option value="November">Noviembre</option>
+                    <option value="December">Diciembre</option>
+                  </select>
+                  <select class="form-select select-fecha-caducidad" name="year" id="year-select">
+                    <option value="Year" selected disabled>Año</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                  </select>
+                </div>
+
+              </div>
+              <div class="col-12 pt-4 pt-md-0 col-md-3 ">
+                <label for="card-cvv">CVV</label>
+                <input name="card-cvv" class="card-cvv" type="text" placeholder="372" value="">
+              </div>
+            </div>
+            <input class="card-submit" type="submit" value="Pagar">
+        </div>
+        </form>
+        <!-- iamgen de tarjeta -->
+        <img class="card-image" src="../IMG/tarjetaBanco3.png" alt="Imagen de tarjeta" class="img-fluid">
+        <div class="card-image-shadow"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Fin codigo modal -->
   <!--Inserccion de nuestro script-->
   <script src="../JS/app.js"></script>
   <script defer src="../JS/taquillaHorariosCarrusel.js"></script>
