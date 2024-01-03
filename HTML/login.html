@@ -37,20 +37,37 @@
                         <a href="recuperar_contrasena.html">¿Olvidaste tu contraseña?</a> 
                     </div>
                         <button id="volverIndex">Volver</button> 
-                        <button>Log In</button>
+                        <button type="submit" id="loginButton">Log In</button>
                     <div class="register">
                         <p>¿No tienes cuenta? <a href="signup.html">Regístrate</a></p>
                     </div>
                 </form>
             </div>
         </div> 
-    </section> 
-    <!--SCRIPT PARA VOLVER A LA PAGINA ANTERIOR-->
+        <div id="mensaje-container" class="mensaje-container" style="display: none;"></div>
+    </section>
+
+    <!--SCRIPT PARA VOLVER A LA PAGINA ANTERIOR EN AMBOS BOTONES-->
     <script>
         const botonVolverIndex = document.getElementById("volverIndex");
+        const botonLogin = document.getElementById("loginButton");
+        const usuario = document.getElementById("usuario");
+        const contrasena = document.getElementById("password");
+        const mensajeContainer = document.getElementById("mensaje-container");
+    
         botonVolverIndex.addEventListener("click", function(evento){
             window.location.href = "../index.html";
         })
+    
+        botonLogin.addEventListener("click", function(evento) {
+            evento.preventDefault(); 
+            if (usuario.value !== '' && contrasena.value !== '') {
+                window.location.href = "../index.html";
+            }else{
+                mensajeContainer.style.display = "block";
+                mensajeContainer.textContent = "Los dos campos no pueden estar vacíos";
+            }
+        });
     </script>
 </body>
 </html>

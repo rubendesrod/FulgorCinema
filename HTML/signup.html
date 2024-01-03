@@ -96,12 +96,14 @@
                 <input type="button" value="Volver" id="volver" formnovalidate>
                 <input type="button" value="Sign Up" id="registro">
             </div>
-        </form>
+        </form><br>
+        <div id="mensaje-container" class="mensaje-container" style="display: none;">
     </div>
     <!--SCRIPT PARA VOLVER A LA PAGINA DE LOGIN-->
     <script>
         const botonVolver = document.getElementById("volver");
         const botonRegistro = document.getElementById("registro");
+        const mensajeContainer = document.getElementById("mensaje-container");
 
         botonVolver.addEventListener("click", function (evento) {
             window.location.href = "login.html";
@@ -109,10 +111,10 @@
 
         botonRegistro.addEventListener("click", function (evento) {
             if (validarFormulario()) {
-                alert("Acabas de registrate correctamente");
                 window.location.href = "login.html";
             } else {
-                alert("Por favor, complete todos los campos correctamente.");
+                mensajeContainer.style.display = "block";
+                mensajeContainer.textContent = "Por favor, rellena los campos correctamente";
                 evento.preventDefault(); 
             }
         });

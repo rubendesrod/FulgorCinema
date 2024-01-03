@@ -203,6 +203,21 @@ input[type="email"] {
   border-bottom: 2px solid #f9b233;
 }
 
+/* ESTILO PARA LA CLASE MENSAJE-CONTAINER */
+.mensaje-container {
+  margin: 0 auto; 
+  padding: 15px;
+  border: 2px solid #F9B233;
+  border-radius: 8px;
+  backdrop-filter: blur(15px) brightness(80%);
+  color: #F9B233;
+  font-size: 1.2em;
+  text-align: center;
+  width: 20%; 
+  box-sizing: border-box; 
+  display: none; 
+}
+
 /* MEDIA QUERYS PARA OBTENER UN DISEÑO RESPONSIVE */
 @media only screen and (max-width: 700px) {
   body {

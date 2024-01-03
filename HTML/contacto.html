@@ -42,10 +42,14 @@
 
             <div class="button-container">
                 <input type="button" id="volver" value="Volver">
-                <input type="submit" value="Enviar">
+                <input type="submit" id="enviar" value="Enviar">
             </div>
         </form>
+    </div>
+    <div id="mensaje-container" class="mensaje-container" style="display: none;">
+      <p id="mensajeError" class="mensaje-error"></p>
     </div><br><br>
+
     <!--CODIGO DEL FOOTER-->
     <footer class="text-white text-center text-lg-start">
       <!-- Grid container -->
@@ -118,10 +122,28 @@
     </footer>
     <!--SCRIPT PARA VOLVER A LA PAGINA DE LOGIN-->
     <script>
-        const botonVolver = document.getElementById("volver");
-        botonVolver.addEventListener("click", function (evento) {
-            window.location.href = "../index.html";
-        })
-    </script>
+      const botonVolver = document.getElementById("volver");
+      const botonEnviar = document.getElementById("enviar");
+      const nombre = document.getElementById("nombre");
+      const correo = document.getElementById("correo");
+      const mensaje = document.getElementById("mensaje");
+      const mensajeContainer = document.getElementById("mensaje-container");
+      const mensajeError = document.getElementById("mensajeError");
+  
+      botonVolver.addEventListener("click", function (evento) {
+          window.location.href = "../index.html";
+      });
+  
+      botonEnviar.addEventListener("click", function(evento) {
+          evento.preventDefault(); 
+          if (nombre.value !== '' && correo.value !== '' && mensaje.value !== '') {
+            mensajeError.textContent = "Se ha enviado su mensaje. En breve recibirá respuesta";
+          } else {
+              // Mostrar mensaje de error si todos los campos están vacíos
+              mensajeContainer.style.display = "block";
+              mensajeError.textContent = "Por favor, completa todos los campos.";
+          }
+      });
+  </script>
 </body>
 </html>
