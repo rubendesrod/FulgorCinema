@@ -48,26 +48,6 @@
     </section>
 
     <!--SCRIPT PARA VOLVER A LA PAGINA ANTERIOR EN AMBOS BOTONES-->
-    <script>
-        const botonVolverIndex = document.getElementById("volverIndex");
-        const botonLogin = document.getElementById("loginButton");
-        const usuario = document.getElementById("usuario");
-        const contrasena = document.getElementById("password");
-        const mensajeContainer = document.getElementById("mensaje-container");
-    
-        botonVolverIndex.addEventListener("click", function(evento){
-            window.location.href = "../index.html";
-        })
-    
-        botonLogin.addEventListener("click", function(evento) {
-            evento.preventDefault(); 
-            if (usuario.value !== '' && contrasena.value !== '') {
-                window.location.href = "../index.html";
-            }else{
-                mensajeContainer.style.display = "block";
-                mensajeContainer.textContent = "Los dos campos no pueden estar vacíos";
-            }
-        });
-    </script>
+    <script src="../JS/login.js"></script>
 </body>
 </html>
