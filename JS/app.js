@@ -1,6 +1,12 @@
+function abrirYouTube(trailerURL) {
+  // Abre una nueva pestaña con la URL del trailer de YouTube
+  window.open(trailerURL, "_blank");
+}
+
 const cambiarBanner = function (evento) {
   // Saco la pelicula que se ha elegido
   let pelicula = evento.srcElement.alt;
+
   // Cambio la interfaz con la pelicula elegida
   interfaz.titulo.textContent = peliculas[pelicula].titulo;
   interfaz.descripcion.textContent = peliculas[pelicula].descripcion;
@@ -10,8 +16,15 @@ const cambiarBanner = function (evento) {
     "url(" + peliculas[pelicula].imagen + ")";
   interfaz.imagenFondo.style.backgroundPosition =
     peliculas[pelicula].movilImagenClass;
+
   // Para que mueva al usuario hasta la parte de arriba
   document.getElementById("logo").scrollIntoView({ behavior: "smooth" });
+
+  // Configuramos el enlace del botón "Ver trailer" con la URL del trailer de la película
+  const botonVerTrailer = document.querySelector(".boton_verTrailer");
+  botonVerTrailer.onclick = function () {
+    abrirYouTube(peliculas[pelicula].trailerURL);
+  };
 
   // Cargamos las horas para el selector de horas cuando seleccionamos otra pelicula
   horas = peliculas[pelicula].horas;
@@ -36,16 +49,18 @@ const peliculas = {
     puntuacion: "../IMG/puntuacion/estrellas5.png",
     horas: ["12:30", "14:20", "16:30", "18:45", "22:30"],
     movilImagenClass: "center center",
+    trailerURL: "https://www.youtube.com/watch?v=nZ8FXOpcXSs",
   },
   // Cartelera Fast And Furious X ..
   fastAndFurious: {
     titulo: "Fast And Furious X",
     descripcion:
       "Dom y su equipo acabaron con el capo de la droga brasileño Hernan Reyes y diezmaron su imperio en un puente de Río de Janeiro. Su hijo Dante, que fue testigo de todo, lleva desde entonces ideando un plan maestro para hacer que Dom pague un precio muy alto por lo que hizo.",
-    imagen: "../IMG/fast_and_furius_x.jpg",
+    imagen: "../IMG/fast_and_furius_x2.jpg",
     puntuacion: "../IMG/puntuacion/estrellas5.png",
     horas: ["17:30", "19:35", "20:30", "21:15", "23:30"],
     movilImagenClass: "center center",
+    trailerURL: "https://www.youtube.com/watch?v=FDhvbIqTQwI",
   },
   // Cartelera de batman: Leyenda Renace ..
   batman: {
@@ -56,16 +71,18 @@ const peliculas = {
     puntuacion: "../IMG/puntuacion/estrellas4.png",
     horas: ["14:55", "16:20", "17:30", "19:00", "22:30"],
     movilImagenClass: "center right",
+    trailerURL: "https://www.youtube.com/watch?v=e0qwi-4iOpE",
   },
   // Cartelera de tucker & dale, Contra el Mal .
   tucker: {
     titulo: "Tucker & Dale: Contra el Mal",
     descripcion:
       "Hilarante y desenfadada comedia de terror en la que dos grandes amigos,Tucker y Dale, de vacaciones en su destartalada casa de la montaña, son confundidos con paletos asesinos por un grupo de estudiantes detestables.",
-    imagen: "../IMG/tucker&dale.jpg",
+    imagen: "../IMG/tucker_dale.jpg",
     puntuacion: "../IMG/puntuacion/estrellas3.png",
     horas: ["17:30", "19:15", "20:30", "22:20", "23:30"],
-    movilImagenClass: "center center",
+    movilImagenClass: "center top",
+    trailerURL: "https://www.youtube.com/watch?v=Mn5W9moZRns",
   },
   // Cartelera equalizer 2.
   equalizer: {
@@ -76,6 +93,7 @@ const peliculas = {
     puntuacion: "../IMG/puntuacion/estrellas3.png",
     horas: ["12:30", "14:15", "16:30", "18:00", "22:30"],
     movilImagenClass: "center right",
+    trailerURL: "https://www.youtube.com/watch?v=IibsmbB6PXQ",
   },
   // Cartelera interestellar .
   interestellar: {
@@ -86,6 +104,7 @@ const peliculas = {
     puntuacion: "../IMG/puntuacion/estrellas4.png",
     horas: ["17:30", "19:00", "20:30", "22:00", "23:30"],
     movilImagenClass: "center right",
+    trailerURL: "https://www.youtube.com/watch?v=IKY4PnbEKkc",
   },
   // Cartelera Start Wars VIII : The last jedi .
   starWars: {
@@ -95,7 +114,8 @@ const peliculas = {
     imagen: "../IMG/star_wars2.jpg",
     puntuacion: "../IMG/puntuacion/estrellas4.png",
     horas: ["12:30", "14:00", "16:30", "18:00", "22:30"],
-    movilImagenClass: "center center",
+    movilImagenClass: "center top",
+    trailerURL: "https://www.youtube.com/watch?v=anOJjqQb8x0",
   },
   // Cartelera Joker alegra esa cara .
   joker: {
@@ -105,8 +125,8 @@ const peliculas = {
     imagen: "../IMG/joker.jpg",
     puntuacion: "../IMG/puntuacion/estrellas3.png",
     horas: ["12:30", "14:00", "16:30", "18:00", "22:30"],
-    movilImagenClass: "center center",
-   
+    movilImagenClass: "left center",
+    trailerURL: "https://www.youtube.com/watch?v=ygUHhImN98w",
   },
   // Cartelera Barbie .
   barbie: {
@@ -117,6 +137,7 @@ const peliculas = {
     puntuacion: "../IMG/puntuacion/estrellas4.png",
     horas: ["17:30", "19:00", "20:30", "22:00", "23:30"],
     movilImagenClass: "center center",
+    trailerURL: "https://www.youtube.com/watch?v=vsJgLu3PIno",
   },
   // Cartelera Avengers: EndGame .
   avengers: {
@@ -127,6 +148,7 @@ const peliculas = {
     puntuacion: "../IMG/puntuacion/estrellas4.png",
     horas: ["12:30", "14:00", "16:30", "18:00", "22:30"],
     movilImagenClass: "center center",
+    trailerURL: "https://www.youtube.com/watch?v=UQ3bqYKnyhM",
   },
   // Cartelera Harry Potter las reliquias de la muerte II
   harryPotter: {
@@ -136,7 +158,8 @@ const peliculas = {
     imagen: "../IMG/harry_potter2.jpg",
     puntuacion: "../IMG/puntuacion/estrellas4.png",
     horas: ["17:30", "19:00", "20:30", "22:00", "23:30"],
-    movilImagenClass: "center left",
+    movilImagenClass: "center top",
+    trailerURL: "https://www.youtube.com/watch?v=M1me0fEgYxY",
   },
   // Cartelera Extraccion 2
   extraccion2: {
@@ -147,6 +170,7 @@ const peliculas = {
     puntuacion: "../IMG/puntuacion/estrellas4.png",
     horas: ["12:30", "14:00", "16:30", "18:00", "22:30"],
     movilImagenClass: "center center",
+    trailerURL: "https://www.youtube.com/watch?v=ZXGMlMPeO68",
   },
 };
 
@@ -156,4 +180,36 @@ imagenes.forEach((imagen) => {
   imagen.addEventListener("click", cambiarBanner);
 });
 
+// Funciones que estan a la escucha de cuando se proceda al pago
+function soloNumeros(evt) {
+  // Obtén el código de la tecla pulsada
+  var charCode = (evt.which) ? evt.which : evt.keyCode;
 
+  // Asegúrate de permitir solo números
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    evt.preventDefault();
+  }
+}
+
+function limitarLongitud(input) {
+  // Limita la longitud del número de tarjeta a 16 dígitos
+  if (input.value.length > 16) {
+    input.value = input.value.slice(0, 16);
+  }
+}
+
+// Funcion para comprobar que el año sea posterior al que nos encontramos
+function validarAnio() {
+  var yearSelect = document.getElementById('year-select');
+  var selectedYear = yearSelect.value;
+  
+  // Obtener el año actual
+  var currentYear = new Date().getFullYear();
+
+  // Validar si el año seleccionado es anterior al año actual
+  if (selectedYear !== "Year" && parseInt(selectedYear) < currentYear) {
+    alert("Por favor, seleccione un año futuro");
+    // Puedes reiniciar la selección del año o tomar otras medidas según tus necesidades
+    yearSelect.value = "Year";
+  }
+}

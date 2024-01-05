@@ -265,7 +265,7 @@
           <form action="../index.html">
             <div class="col-md-12 col-12">
               <label for="card-number">Nº DE TARJETA</label>
-              <input name="card-number" class="card-number" type="text" placeholder="5886 5912 3412 3456" required>
+              <input name="card-number" class="card-number" onkeypress="soloNumeros(event)" oninput="limitarLongitud(this)" maxlength="16" type="text" placeholder="5886 5912 3412 3456" required>
             </div>
             <div class="col-md-12 col-12">
               <label for="card-name">TITULAR</label>
@@ -290,7 +290,7 @@
                     <option value="November">Noviembre</option>
                     <option value="December">Diciembre</option>
                   </select>
-                  <select class="form-select select-fecha-caducidad" name="year" id="year-select">
+                  <select class="form-select select-fecha-caducidad" name="year" id="year-select" onchange="validarAnio()">
                     <option value="Year" selected disabled>Año</option>
                     <option value="2022">2022</option>
                     <option value="2023">2023</option>
@@ -307,7 +307,7 @@
               </div>
               <div class="col-12 pt-4 pt-md-0 col-md-3 ">
                 <label for="card-cvv">CVV</label>
-                <input name="card-cvv" class="card-cvv" type="text" placeholder="372" value="">
+                <input name="card-cvv" class="card-cvv" onkeypress="soloNumeros(event)" oninput="limitarLongitud(this)" maxlength="3" type="text" placeholder="372" value="">
               </div>
             </div>
             <input class="card-submit" type="submit" value="Pagar">
