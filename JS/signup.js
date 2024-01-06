@@ -18,8 +18,8 @@ botonRegistro.addEventListener("click", function (evento) {
 
 function validarFormulario() {
     const nombre = document.getElementById('txtNombre').value;
-    const primerApellido = document.getElementById('txtPrimerApellido').value;
-    const segundoApellido = document.getElementById('txtSegundoApellido').value;
+    const apellidos = document.getElementById('txtApellidos').value;
+    const password = document.getElementById('txtContraseña').value;
     const dni = document.getElementById('txtDni').value;
     const fechaNacimiento = document.getElementById('dateFechaNacimiento').value;
     const calle = document.getElementById('txtCalle').value;
@@ -30,7 +30,7 @@ function validarFormulario() {
     const telefono = document.getElementById('numbTlf').value;
     const correo = document.getElementById('emailCorreo').value;
 
-    return nombre !== '' && primerApellido !== '' && segundoApellido !== '' &&
+    return nombre !== '' && apellidos !== '' && password !== '' &&
         dni !== '' && fechaNacimiento !== '' && calle !== '' && numero !== '' &&
         ciudad !== '' && provincia !== '' && cp !== '' && telefono !== '' && correo !== '';
 }

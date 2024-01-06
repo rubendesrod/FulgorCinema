@@ -57,8 +57,8 @@ body {
 }
 
 #txtNombre,
-#txtPrimerApellido,
-#txtSegundoApellido,
+#txtApellidos,
+#txtContraseña,
 #txtDni {
   width: 9.8em;
 }
@@ -156,7 +156,8 @@ input[type="submit"] {
   }
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
   background: transparent;
   border: none;
   outline: none;
