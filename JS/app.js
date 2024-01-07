@@ -1,16 +1,19 @@
+// Funcion para abrir la nueva ventana del triler de youtube
 function abrirYouTube(trailerURL) {
   // Abre una nueva pestaña con la URL del trailer de YouTube
   window.open(trailerURL, "_blank");
 }
 
-const cambiarBanner = function (evento) {
-  // Saco la pelicula que se ha elegido
-  let pelicula = evento.srcElement.alt;
+// Funcion que realiza todo el cambio en la cabecera de la pagina, foto, titulo, imagen, texto y imagenes
+const cambiarBanner = function (evento, peliculaPorDefecto = "interestellar") {
+   // Saco la pelicula que se ha elegido
+   let pelicula = evento ? evento.srcElement.alt : peliculaPorDefecto;
 
   // Cambio la interfaz con la pelicula elegida
   interfaz.titulo.textContent = peliculas[pelicula].titulo;
   interfaz.descripcion.textContent = peliculas[pelicula].descripcion;
   interfaz.puntuacion.attributes.src.nodeValue = peliculas[pelicula].puntuacion;
+
   // interfaz.imagenFondo.attributes.src.nodeValue = peliculas[pelicula].imagen
   interfaz.imagenFondo.style.backgroundImage =
     "url(" + peliculas[pelicula].imagen + ")";
@@ -20,10 +23,10 @@ const cambiarBanner = function (evento) {
   // Para que mueva al usuario hasta la parte de arriba
   document.getElementById("logo").scrollIntoView({ behavior: "smooth" });
 
-  // Configuramos el enlace del botón "Ver trailer" con la URL del trailer de la película
+   // Configuramos el enlace del botón "Ver trailer" con la URL del trailer de la película
   const botonVerTrailer = document.querySelector(".boton_verTrailer");
   botonVerTrailer.onclick = function () {
-    abrirYouTube(peliculas[pelicula].trailerURL);
+     abrirYouTube(peliculas[pelicula].trailerURL);
   };
 
   // Cargamos las horas para el selector de horas cuando seleccionamos otra pelicula
@@ -31,6 +34,9 @@ const cambiarBanner = function (evento) {
   pintarHoras();
 };
 
+
+
+// Elementos que se quieren cambiar de la interfaz
 const interfaz = {
   titulo: document.getElementById("titulo"),
   puntuacion: document.getElementById("puntuacion"),
@@ -179,6 +185,9 @@ let imagenes = document.querySelectorAll(".pelicula");
 imagenes.forEach((imagen) => {
   imagen.addEventListener("click", cambiarBanner);
 });
+
+// Hago una carga nada mas lea el script de la pelicula interestellar para cuando se entre por primera vez asctive la pelicula que esta precargada
+cambiarBanner(document.getElementById("interestellar"));
 
 // Funciones que estan a la escucha de cuando se proceda al pago
 function soloNumeros(evt) {
